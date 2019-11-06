@@ -1,0 +1,24 @@
+{
+  "name": "canivote.org.uk",
+  "version": "1.0.0",
+  "description": "Static site for Citizens UK election awareness campaign",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "production": "npx eleventy",
+    "start": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliblackwell/canivote.org.uk.git"
+  },
+  "author": "Alasdair Blackwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aliblackwell/canivote.org.uk/issues"
+  },
+  "homepage": "https://github.com/aliblackwell/canivote.org.uk#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  }
+}
