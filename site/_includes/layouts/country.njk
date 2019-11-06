@@ -1,20 +1,32 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <title>Can I Vote Page 2 </title>
-  </head>
-  <body>
 
-    <div class="container">
- 
-      {{ content | safe }}
- 
-    </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>{{title | safe}}</title>
+</head>
 
- 
- 
-  </body>
+<body>
+
+  <div class="container">
+
+
+    {% if commonwealth.indexOf(country.name.common) > -1 %}
+    <p>You can vote!</p>
+    {% endif %}
+    {% if eu.indexOf(country.name.common) > -1 %}
+    <p>You can't vote in this election but you can in others!</p>
+    {% endif %}
+    {{ content | safe }}
+
+
+
+  </div>
+
+
+
+</body>
+
 </html>
