@@ -8,7 +8,7 @@ layout: layouts/base.njk
 
 ## It's not just British citizens who can vote in UK elections.
 
-<form method="get" action="/">
+<form id="country-selector" method="get" action="/">
   <label>
     <h3>Choose your country</h3>
     <select name="country">
@@ -20,9 +20,3 @@ layout: layouts/base.njk
     <button>Can I Vote?</button>
   </label>
 </form>
-<ul>
-  {%- for country in countries -%}
-  <li class="country {{ country.cca3 }}"><a href="/{{ country.name.common | slug }}/">I am a citizen of
-      {{ country.name.common }}</a></li>
-  {%- endfor -%}
-</ul>
