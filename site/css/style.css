@@ -1,5 +1,6 @@
 :root {
   --px-149: 6rem;
+  --px-52: 2.5rem;
   --px-45: 2.25rem;
   --px-45-lh: 1.1;
   --px-26: 1.25rem;
@@ -7,9 +8,11 @@
   --top-space: 8rem;
   --line-height: 1.2;
   --content-width: 1100px;
+  --border-width: 0.5rem;
   --pink: #e60050;
   --pink-muted: #93183e;
   --green: #108a00;
+  --green-muted: #095200;
   --black: #101010;
 }
 
@@ -50,6 +53,7 @@ Core breakpoints
     --default-20px: 18px;
     --px-26: 1.1rem;
     --px-45: 2rem;
+    --px-52: 2.2rem;
     --content-width: 90%;
   }
 }
@@ -57,15 +61,20 @@ Core breakpoints
 @media (max-width: 600px) {
   :root {
     --default-20px: 16px;
-    --px-26: 1rem;
+    --px-26: 1.1rem;
+    --px-45: 1.6rem;
+    --px-52: 1.8rem;
     --content-width: 580px;
+    --border-width: 0.3rem;
   }
 }
 
 @media (max-width: 480px) {
   :root {
     --default-20px: 16px;
-    --px-27: 1.25rem;
+    --px-26: 1rem;
+    --px-45: 1.4rem;
+    --px-52: 1.6rem;
     --content-width: 90%;
   }
 }
@@ -223,6 +232,32 @@ blockquote {
   position: relative;
 }
 
+@media (max-width: 600px) {
+  .content-container {
+    padding: 0 1rem 0;
+  }
+}
+
+/* CTAs */
+
+a.register-cta,
+a.register-cta:visited {
+  display: inline-block;
+  font-size: var(--px-52);
+  background: var(--green);
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  margin: 1rem 1rem 0;
+}
+a.register-cta:active,
+a.register-cta:hover {
+  background: var(--green-muted);
+  text-decoration: none;
+}
+
 /* Homepage */
 
 #can-i-vote {
@@ -246,12 +281,16 @@ blockquote {
   color: white;
   font-size: var(--px-45);
   line-height: var(--px-45-lh);
-  margin: 1.5rem auto 1rem;
-  max-width: 60vw;
+  margin: 1.75rem auto 1.5rem;
+  max-width: 45rem;
 }
 
 .country .main-content p {
   color: var(--black);
+}
+
+#can-i-vote h1 img {
+  width: 100%;
 }
 
 @media (max-width: 1100px) {
@@ -276,9 +315,20 @@ blockquote {
   }
 }
 
-#can-i-vote h1 img {
-  width: 100%;
+@media (max-width: 480px) {
+  #can-i-vote h2,
+  .country .main-content p {
+    max-width: 95%;
+  }
+  #can-i-vote h1 {
+    width: auto;
+  }
+  #can-i-vote h1 img {
+    width: 90%;
+  }
 }
+
+
 
 .home .container {
   background: url(../img/canivote-bg.jpg);
@@ -306,6 +356,15 @@ blockquote {
   right: 3rem;
   font-size: var(--px-26);
   width: 8rem;
+}
+
+@media (max-width: 600px) {
+  .sharer {
+    width: 6rem;
+    top: 1rem;
+    right: 1rem;
+  }
+  
 }
 
 .sharer button {
@@ -454,7 +513,7 @@ footer p {
   margin: 0px auto;
   position: relative;
   display: inline-block;
-  border: 0.5rem solid var(--pink-muted);
+  border: var(--border-width) solid var(--pink-muted);
 }
 
 .country .main-content {
@@ -466,7 +525,7 @@ footer p {
 
 .result h1 {
   margin: 0;
-  border-right: 0.5rem solid var(--pink-muted);
+  border-right: var(--border-width) solid var(--pink-muted);
   display: block;
   color: var(--pink-muted);
   font-size: var(--px-149);
@@ -483,9 +542,25 @@ footer p {
   width: 16em;
 }
 
+@media (max-width: 700px) {
+  .result img {
+    width: 12em;
+  }
+}
+
+@media (max-width: 480px) {
+  .result h1 {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }
+  .result img {
+    width: 8em;
+  }
+}
+
 .white-angle-area {
   background: transparent;
-  padding: 10rem 0 0;
+  padding: 8.5rem 0 0;
   position: relative;
   margin-bottom: -5rem;
 }
@@ -507,19 +582,25 @@ footer p {
 }
 
 .white-angle-area ul li {
-  font-size: var(--px-27);
+  font-size: var(--px-26);
   list-style: none;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75em;
   line-height: 1.1;
-  max-width: 40rem;
-  padding: 1rem 0 0 3.8rem;
+  max-width: 40em;
+  padding: 1em 0 0 3.8em;
   background-image: url("../img/tick.svg");
   background-position: 6px 9px;
   background-repeat: no-repeat;
-  min-height: 3.7rem;
-  background-size: 2.5rem;
+  min-height: 3.7em;
+  background-size: 2.5em;
   display: inline-block;
 }
 
-.white-angle-area ul li {
+@media (max-width: 600px) {
+  .white-angle-area ul li {
+  }
+  .white-angle-area ul {
+    width: 90%;
+    padding-left: 0;
+  }
 }
