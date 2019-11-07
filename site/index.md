@@ -4,9 +4,9 @@ subtitle: Can I?
 layout: layouts/base.njk
 ---
 
-# Can I Vote?
+<h1 class="ws-bold"><img src="/img/can-i-vote-tick.svg" alt="Can I vote?" /></h1>
 
-## It's not just British citizens who can vote in UK elections.
+<h2 class="ws-semibold">It's not just British citizens who can vote in UK elections.</h2>
 
 <form id="country-selector" method="get" action="/">
   <label>

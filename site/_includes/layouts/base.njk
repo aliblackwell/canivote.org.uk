@@ -1,20 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Can I Vote - {{ title }}</title>
-  </head>
-  <body {% if bodyClass %}class="{{ bodyClass }}"{% endif %}>
 
-    <div class="container">
- 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Can I Vote - {{ title }}</title>
+</head>
+
+<body class="home ws-medium" {% if bodyClass %}class="{{ bodyClass }}" {% endif %}>
+
+  <main class="container">
+    {% include "partials/sharer.njk" %}
+    <section class="main-content" id="can-i-vote">
       {{ content | safe }}
- 
-    </div>
+    </section>
+    {% include "partials/footer.njk" %}
 
- 
-    <script src="/js/selector-interceptor.js"></script>
-  </body>
+  </main>
+
+
+  <script src="/js/selector-interceptor.js"></script>
+</body>
+
 </html>

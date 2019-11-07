@@ -5,5 +5,20 @@ function handleCountrySelection(event) {
   window.location = finalPath
 }
 
-let form = document.querySelector('#country-selector')
-form.addEventListener('submit', handleCountrySelection);
+let countrySelectorForm = document.querySelector('#country-selector')
+if (countrySelectorForm) {
+  countrySelectorForm.addEventListener('submit', handleCountrySelection);
+}
+
+
+let sharer = document.querySelector('.sharer ul')
+sharer.style.display = 'none'
+
+function sharePage() {
+  let isVisible = sharer.style.display;
+  if (isVisible === 'block') {
+    sharer.style.display = 'none'
+  } else {
+    sharer.style.display = 'block'
+  }
+}
