@@ -29,7 +29,7 @@
   "Nauru",
   "New Zealand",
   "Nigeria",
-  "Pakistan*",
+  "Pakistan",
   "Papua New Guinea",
   "Rwanda",
   "Saint Kitts and Nevis",
@@ -51,5 +51,9 @@
   "United Kingdom",
   "Vanuatu",
   "Zambia",
-  "Zimbabwe"
+  "Zimbabwe",
+  "Guernsey",
+  "Jersey",
+  "Isle of Man",
+  "Ireland"
 ]
