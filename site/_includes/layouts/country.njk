@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
   <link rel="stylesheet" href="/css/style.css">
-  <title>{{title | safe}}</title>
+  <title>{{country.name.common}}</title>
 </head>
 
 <body class="country ws-medium">
@@ -25,8 +25,18 @@
       <a class="ws-semibold register-cta" href="https://www.gov.uk/register-to-vote" target="_blank" title="Register to vote on gov.uk">Register to vote</a>
     </section>
     {% endif %}
+
+
     {% if eu.indexOf(country.name.common) > -1 %}
-    <p>You can't vote in this election but you can in others!</p>
+    <section class="main-content">
+      <header class="result">
+        <h1 class="ws-bold">No</h1>
+        <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name.common }} Flag" />
+      </header>
+      <p class="ws-bold">Citizens of {{country.name.common}} can't vote on Thursday December 12th </p>
+      <p class="ws-bold but-local">But you can vote in local, European and some regional elections.</p>
+      <a class="ws-semibold register-cta" href="https://www.gov.uk/register-to-vote" target="_blank" title="Register to vote on gov.uk">Register to vote</a>
+    </section>
     {% endif %}
     {{ content | safe }}
 

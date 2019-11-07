@@ -2,6 +2,7 @@
   --px-149: 6rem;
   --px-52: 2.5rem;
   --px-45: 2.25rem;
+  --px-35: 1.5rem;
   --px-45-lh: 1.1;
   --px-26: 1.25rem;
   --default-20px: 20px;
@@ -9,6 +10,7 @@
   --line-height: 1.2;
   --content-width: 1100px;
   --border-width: 0.5rem;
+  --flag-height: 6.6rem;
   --pink: #e60050;
   --pink-muted: #93183e;
   --green: #108a00;
@@ -52,6 +54,7 @@ Core breakpoints
   :root {
     --default-20px: 18px;
     --px-26: 1.1rem;
+    --px-35: 1.25rem;
     --px-45: 2rem;
     --px-52: 2.2rem;
     --content-width: 90%;
@@ -62,10 +65,13 @@ Core breakpoints
   :root {
     --default-20px: 16px;
     --px-26: 1.1rem;
+    --px-35: 1.2rem;
     --px-45: 1.6rem;
     --px-52: 1.8rem;
     --content-width: 580px;
-    --border-width: 0.3rem;
+    --border-width: 0.4rem;
+    --px-149: 4rem;
+    --flag-height: 4.6rem;
   }
 }
 
@@ -73,6 +79,7 @@ Core breakpoints
   :root {
     --default-20px: 16px;
     --px-26: 1rem;
+    --px-35: 1.1rem;
     --px-45: 1.4rem;
     --px-52: 1.6rem;
     --content-width: 90%;
@@ -289,6 +296,11 @@ a.register-cta:hover {
   color: var(--black);
 }
 
+.country .main-content p.but-local {
+  font-size: var(--px-35);
+  max-width: 30rem;
+}
+
 #can-i-vote h1 img {
   width: 100%;
 }
@@ -302,6 +314,9 @@ a.register-cta:hover {
   .country .main-content p {
     max-width: 80vw;
   }
+  .country .main-content p.but-local {
+    max-width: 70vw;
+  }
 }
 
 @media (max-width: 900px) {
@@ -312,6 +327,9 @@ a.register-cta:hover {
   #can-i-vote h2,
   .country .main-content p {
     max-width: 70vw;
+  }
+  .country .main-content p.but-local {
+    max-width: 90vw;
   }
 }
 
@@ -327,8 +345,6 @@ a.register-cta:hover {
     width: 90%;
   }
 }
-
-
 
 .home .container {
   background: url(../img/canivote-bg.jpg);
@@ -364,7 +380,6 @@ a.register-cta:hover {
     top: 1rem;
     right: 1rem;
   }
-  
 }
 
 .sharer button {
@@ -514,6 +529,7 @@ footer p {
   position: relative;
   display: inline-block;
   border: var(--border-width) solid var(--pink-muted);
+  height: auto;
 }
 
 .country .main-content {
@@ -525,36 +541,26 @@ footer p {
 
 .result h1 {
   margin: 0;
-  border-right: var(--border-width) solid var(--pink-muted);
   display: block;
   color: var(--pink-muted);
   font-size: var(--px-149);
-  line-height: 1;
   background: white;
   float: left;
-  padding: 1rem 2.5rem;
+  padding: 0.3rem 2.5rem;
+  line-height: 1;
 }
 
 .result img {
   display: inline;
   vertical-align: bottom;
   margin: 0;
-  width: 16em;
-}
-
-@media (max-width: 700px) {
-  .result img {
-    width: 12em;
-  }
+  border-left: var(--border-width) solid var(--pink-muted);
+  height: var(--flag-height);
 }
 
 @media (max-width: 480px) {
   .result h1 {
-    font-size: 2rem;
-    padding: 1rem 2rem;
-  }
-  .result img {
-    width: 8em;
+    padding: 0.3rem 1.5rem;
   }
 }
 
