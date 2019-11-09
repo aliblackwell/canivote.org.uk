@@ -709,6 +709,7 @@ select {
 #sign-up input[type="email"],
 select {
   border: 1px solid var(--border-grey);
+  border-radius: 0;
 }
 
 *:focus {

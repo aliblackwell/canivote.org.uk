@@ -8,7 +8,57 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/favicon.png"/>
 
-    <title>{{country.name.common}}</title>
+    {% if commonwealth.includes(country.name.common) %}
+
+      <meta name="description" content="Citizens of {{country.name.common}} can vote on Thursday December 12th"/>
+      <meta property="og:title" content="Can I Vote?">
+      <meta property="og:site_name" content="Can I Vote?">
+      <meta property="og:url" content="https://www.canivote.org.uk/{{ country.name.common | slug }}/">
+      <meta property="og:description" content="Citizens of {{country.name.common}} can vote on Thursday December 12th">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+
+      <meta name="twiiter:card" content="summary">
+      <meta name="twitter:title" content="Can I Vote?">
+      <meta name="twitter:description" content="Citizens of {{country.name.common}} can vote on Thursday December 12th">
+      <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name.common | slug }}/">
+      <meta name="twitter:image" content="">
+
+    {% elseif eu.includes(country.name.common)%}
+
+      <meta name="description" content="Citizens of {{country.name.common}} can't vote on Thursday December 12th, but can vote in local, European and some regional elections."/>
+      <meta property="og:title" content="Can I Vote?">
+      <meta property="og:site_name" content="Can I Vote?">
+      <meta property="og:url" content="https://www.canivote.org.uk/{{ country.name.common | slug }}/">
+      <meta property="og:description" content="Citizens of {{country.name.common}} can't vote on Thursday December 12th, but can vote in local, European and some regional elections."">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+
+      <meta name="twiiter:card" content="summary">
+      <meta name="twitter:title" content="Can I Vote?">
+      <meta name="twitter:description" content="You don’t have to be a British Citizen to vote in the UK election. Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections. ">
+      <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name.common | slug }}/">
+      <meta name="twitter:image" content="">
+    {% else %}
+      <meta name="description" content="Citizens of {{country.name.common}} can't vote in UK elections, but can still participate in the community, take action on 
+issues with your neighbours and make your voice heard"/>
+      <meta property="og:title" content="Can I Vote?">
+      <meta property="og:site_name" content="Can I Vote?">
+      <meta property="og:url" content="https://www.canivote.org.uk/{{ country.name.common | slug }}/">
+      <meta property="og:description" content="Citizens of {{country.name.common}} can't vote in UK elections, but can still participate in the community, take action on 
+issues with your neighbours and make your voice heard">
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="">
+
+      <meta name="twiiter:card" content="summary">
+      <meta name="twitter:title" content="Can I Vote?">
+      <meta name="twitter:description" content="Citizens of {{country.name.common}} can't vote in UK elections, but can still participate in the community, take action on 
+issues with your neighbours and make your voice heard">
+      <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name.common | slug }}/">
+      <meta name="twitter:image" content="">
+    {% endif %}
+
+    <title>Can I Vote – {{country.name.common}}</title>
   </head>
 
   <body class="country ws-medium">

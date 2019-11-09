@@ -6,9 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <title>Can I Vote -
-      {{ title }}</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <title>Can I Vote?</title>
+    <meta name="description" content="You don’t have to be a British Citizen to vote in the UK election." />
+    <meta property="og:title" content="Can I Vote?">
+    <meta property="og:site_name" content="Can I Vote?">
+    <meta property="og:url" content="https://www.canivote.org.uk">
+    <meta property="og:description" content="You don’t have to be a British Citizen to vote in the UK election. Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections. ">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+
+    <meta name="twiiter:card" content="summary">
+    <meta name="twitter:title" content="Can I Vote?">
+    <meta name="twitter:description" content="You don’t have to be a British Citizen to vote in the UK election. Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections. ">
+    <meta name="twitter:url" content="https://www.canivote.org.uk">
+    <meta name="twitter:image" content="">
+
   </head>
 
   <body class="home ws-medium">
@@ -21,8 +34,8 @@
           <label>
             <h3>Choose your country</h3>
             <select name="country">
-
-              {% for country in countries | alphabeticize  %}
+                <option value=""></option>
+              {% for country in countries | alphabeticize %}
                 <option value="{{ country.name.common | slug }}">{{ country.name.common }}</option>
               {% endfor %}
             </select>
