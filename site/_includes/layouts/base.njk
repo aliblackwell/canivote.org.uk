@@ -16,7 +16,7 @@
       {% include "partials/sharer.njk" %}
       <section class="main-content" id="can-i-vote">
         {{ content | safe }}
-        <form id="country-selector" method="get" action="/">
+        <form id="country-selector" method="get" action="/" autocomplete="off" type="search">
           <label>
             <h3>Choose your country</h3>
             <select name="country">
@@ -25,7 +25,7 @@
                 <option value="{{ country.name.common | slug }}">{{ country.name.common }}</option>
               {% endfor %}
             </select>
-            <button>Can I Vote?</button>
+            <input type="submit" value="Can I vote?">
           </label>
         </form>
       </section>

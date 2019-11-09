@@ -1,63 +1,101 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
-  <link rel="stylesheet" href="/css/style.css">
-  <title>{{country.name.common}}</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>{{country.name.common}}</title>
+  </head>
 
-<body class="country ws-medium">
+  <body class="country ws-medium">
 
-  <main class="container">
+    <main class="container">
 
-    {% include "partials/sharer.njk" %}
+      {% include "partials/sharer.njk" %}
 
-    {% if commonwealth.indexOf(country.name.common) > -1 %}
-    <section class="main-content">
-      <header class="result">
-        <h1 class="ws-bold">Yes!</h1>
-        <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name.common }} Flag" />
-      </header>
-      <p class="ws-bold">Citizens of {{country.name.common}} can vote on Thursday December 12th </p>
-      <a class="ws-semibold register-cta" href="https://www.gov.uk/register-to-vote" target="_blank" title="Register to vote on gov.uk">Register to vote</a>
-    </section>
-    {% endif %}
+      {% if commonwealth.includes(country.name.common) %}
+        <section class="main-content">
+          <header class="result">
+            <h1 class="ws-bold">Yes!</h1>
+            <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name.common }} Flag"/>
+          </header>
+          <h2 class="ws-boldtitle">Citizens of
+            {{country.name.common}}
+            can vote on Thursday December 12th
+          </h2>
+          <a class="ws-semibold register-cta" href="https://www.gov.uk/register-to-vote" target="_blank" title="Register to vote on gov.uk">Register to vote</a>
+        </section>
+        <section class="white-angle-area">
+          <div class="content-container">
+            <ul class="ws-semibold tick-list">
+              <li>Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections.</li>
+              <li>You don’t have to bring any ID documents with you to the polls.
+              </li>
+              <li>You won’t be asked any immigration or benefits related questions at any polling stations.
+              </li>
+            </ul>
+          </div>
 
+        {% elseif eu.includes(country.name.common)%}
+          <section class="main-content">
+            <header class="result">
+              <h1 class="ws-bold">No</h1>
+              <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name.common }} Flag"/>
+            </header>
+            <h2 class="ws-bold title">Citizens of
+              {{country.name.common}}
+              can't vote on Thursday December 12th
+            </h2>
+            <h3 class="ws-bold but-local title">But you can vote in local, European and some regional elections.</h3>
+            <a class="ws-semibold register-cta" href="https://www.gov.uk/register-to-vote" target="_blank" title="Register to vote on gov.uk">Register to vote</a>
 
-    {% if eu.indexOf(country.name.common) > -1 %}
-    <section class="main-content">
-      <header class="result">
-        <h1 class="ws-bold">No</h1>
-        <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name.common }} Flag" />
-      </header>
-      <p class="ws-bold">Citizens of {{country.name.common}} can't vote on Thursday December 12th </p>
-      <p class="ws-bold but-local">But you can vote in local, European and some regional elections.</p>
-      <a class="ws-semibold register-cta" href="https://www.gov.uk/register-to-vote" target="_blank" title="Register to vote on gov.uk">Register to vote</a>
-    </section>
-    {% endif %}
-    {{ content | safe }}
+            {% include "partials/ticks-non-voters.njk" %}
+          {% else %}
 
-    <section class="white-angle-area">
-      <div class="content-container">
-        <ul class="ws-semibold">
-          <li>You can still contact elected representatives and ask for help.</li>
-          <li>You can still participate in you community, take action on issues with your neighbours and make your voice
-            heard.</li>
-          <li>You can join with millions of people around the country who take action on social justice issues together.
-          </li>
-        </ul>
-      </div>
-    </section>
+            <section class="main-content">
+              <header class="result">
+                <h1 class="ws-bold">No</h1>
+                <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name.common }} Flag"/>
+              </header>
+              <h2 class="ws-bold title">Citizens of
+                {{country.name.common}}
+                can't vote on Thursday December 12th
+              </h2>
+              <a class="ws-semibold register-cta" href="https://www.gov.uk/register-to-vote" target="_blank" title="Register to vote on gov.uk">Register to vote</a>
 
-    {% include "partials/footer.njk" %}
+              {% include "partials/ticks-non-voters.njk" %}
+            {% endif %}
+            {{ content | safe }}
 
-  </main>
+            <article id="sign-up">
+              <h1 class="ws-bold">Democracy begins on polling day.<br/>
+                But it doesn't stop there.</h1>
+              <h2 class="ws-medium">Join with neighbours, friends and colleagues to campaign for social justice and the common good.
+              </h2>
+              <form name="sign-up" netlify>
+                <label for="name">Name
+                  <input type="text" name="name" required="required"/>
+                </label>
+                <label for="email">Email
+                  <input type="email" name="email" required="required"/>
+                </label>
+                <label for="email">Phone number
+                  <input type="number" name="number"/>
+                </label>
+                <label for="sign-up">Sign up to be contacted by Citizens UK using the details you provide above
+                  <input name="sign-up" type="submit" value="Sign up"/>
+                </label>
+              </form>
+            </article>
+          </section>
 
+          {% include "partials/footer.njk" %}
 
-  <script src="/js/selector-interceptor.js"></script>
-</body>
+        </main>
 
-</html>
+        <script src="/js/selector-interceptor.js"></script>
+      </body>
+
+    </html>

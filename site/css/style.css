@@ -5,14 +5,15 @@
   --px-35: 1.5rem;
   --px-45-lh: 1.1;
   --px-26: 1.25rem;
-  --default-20px: 20px;
-  --top-space: 8rem;
+  --default-20px: 18px;
+  --top-space: 6rem;
   --line-height: 1.2;
   --content-width: 1100px;
   --border-width: 0.5rem;
   --flag-height: 6.6rem;
   --pink: #e60050;
   --pink-muted: #93183e;
+  --pink-transparent: rgba(255, 0, 78, 0.13);
   --green: #108a00;
   --green-muted: #095200;
   --black: #101010;
@@ -52,7 +53,7 @@ Core breakpoints
 
 @media (max-width: 900px) {
   :root {
-    --default-20px: 18px;
+    --default-20px: 16px;
     --px-26: 1.1rem;
     --px-35: 1.25rem;
     --px-45: 2rem;
@@ -144,7 +145,6 @@ html {
   line-height: var(--line-height);
   text-rendering: optimizeLegibility;
   margin: 0;
-  background: white;
   width: 100%;
   height: 100%;
 }
@@ -175,14 +175,14 @@ textarea {
 
 body {
   margin: 0;
-  background: var(--pink);
+  
   overflow-x: hidden;
   width: 100%;
   min-height: 100%;
 }
 
 body.country {
-  background: rgba(255, 0, 78, 0.13);
+  background: var(--pink-transparent);
 }
 
 h1,
@@ -284,7 +284,7 @@ a.register-cta:hover {
 }
 
 #can-i-vote h2,
-.country .main-content p {
+.country h2.title {
   color: white;
   font-size: var(--px-45);
   line-height: var(--px-45-lh);
@@ -292,13 +292,14 @@ a.register-cta:hover {
   max-width: 45rem;
 }
 
-.country .main-content p {
+.country h2.title {
   color: var(--black);
 }
 
-.country .main-content p.but-local {
+.country h3.title {
   font-size: var(--px-35);
   max-width: 30rem;
+  margin: 0 auto;
 }
 
 #can-i-vote h1 img {
@@ -353,7 +354,7 @@ a.register-cta:hover {
 }
 
 #country-selector {
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
 }
 
 #country-selector label h3 {
@@ -463,14 +464,14 @@ footer::before {
   background: url("../img/canivote-bg.jpg");
   background-position: center center;
   background-size: cover;
-  bottom: -10rem;
 }
 footer {
   width: 100%;
-  height: 30rem;
+  height: 20rem;
   position: relative;
   margin-bottom: 0;
   overflow: hidden;
+  z-index: 11;
 }
 
 footer .left {
@@ -495,14 +496,7 @@ footer p {
   margin: 0;
   position: relative;
   top: 9rem;
-}
-
-.country footer img {
-  top: 25rem;
-}
-
-.country footer p {
-  top: 18rem;
+  text-align: left;
 }
 
 @media (max-width: 900px) {
@@ -588,9 +582,9 @@ footer p {
 
 .white-angle-area {
   background: transparent;
-  padding: 8.5rem 0 0;
+  padding: 7.5rem 0 0;
   position: relative;
-  margin-bottom: -5rem;
+  bottom: 2rem;
 }
 .white-angle-area::before {
   content: "";
@@ -632,3 +626,57 @@ footer p {
     padding-left: 0;
   }
 }
+ul.tick-list {
+  padding-left: 0;
+  text-align:left;
+}
+#sign-up {
+  background: var(--pink-transparent);
+  padding: 3rem 6rem 10rem;
+  width: 38rem;
+  text-align: left;
+  margin: 4rem auto -15rem;
+  position: relative;
+  z-index: 10;
+}
+
+#sign-up h1 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: var(--px-35);
+}
+
+#sign-up h2 {
+  margin: 0;
+  font-size: var(--default-20px);
+}
+
+#sign-up form {
+  max-width: 80%;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  #sign-up form {
+    max-width: 100%;
+  }
+  #sign-up {
+    padding: 3rem 3rem 10rem;
+    width: 100%;
+  }
+}
+
+#sign-up label {
+  font-size: 1rem;
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+#sign-up input {
+  display: block;
+  width: 100%;
+}
+
+#sign-up

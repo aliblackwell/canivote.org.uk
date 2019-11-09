@@ -1,5 +1,9 @@
 function handleCountrySelection(event) {
+  console.log('submitting')
   event.preventDefault();
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+  
   let country = event.target[0].value;
   let finalPath = `/${country}/`
   window.location = finalPath
