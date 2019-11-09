@@ -166,7 +166,7 @@ select,
 optgroup,
 textarea {
   color: var(--black);
-  font-family: var(--founders-regular);
+  font-family: inherit;
   font-weight: 400;
   font-size: 16px;
   font-size: 1rem;
@@ -367,11 +367,12 @@ a.register-cta:hover {
 /* Sharer */
 
 .sharer {
-  position: absolute;
+  position: fixed;
   top: 2rem;
   right: 3rem;
   font-size: var(--px-26);
   width: 8rem;
+  z-index: 10;
 }
 
 @media (max-width: 600px) {
@@ -390,6 +391,7 @@ a.register-cta:hover {
   text-transform: uppercase;
   position: absolute;
   font-size: inherit;
+  cursor: pointer;
 }
 
 .sharer button::after {
@@ -410,13 +412,33 @@ a.register-cta:hover {
 }
 
 .sharer ul {
-  border: 3px solid white;
   padding: 0.35em 0.5em;
   color: white;
-  background: transparent;
+  background: white;
   text-transform: uppercase;
+  margin: 3rem 0 0 0;
+  width: 10rem;
+  margin-left: -2.6rem;
+  border: solid var(--pink-muted) var(--border-width);
+  list-style: none;
 }
 
+.sharer li {
+  margin-bottom: 0rem;
+}
+
+.sharer li a,
+.sharer li a:visited {
+  display: block;
+  color: var(--pink-muted);
+  text-decoration: none;
+  padding: 0.25rem 0
+}
+
+.sharer li a:hover,
+.sharer li a:active {
+  text-decoration: underline;
+}
 .country .sharer button,
 .country .sharer ul {
   border: 3px solid var(--pink-muted);
