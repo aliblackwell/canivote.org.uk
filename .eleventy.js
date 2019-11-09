@@ -6,6 +6,7 @@ module.exports = function(config) {
   config.addPassthroughCopy("./site/js")
   config.addPassthroughCopy("./site/_redirects")
   config.addPassthroughCopy("./site/humans.txt")
+  config.addPassthroughCopy("./site/favicon.png")
 
   config.addFilter("alphabeticize", function(value) {
     value.sort(function(a, b) {

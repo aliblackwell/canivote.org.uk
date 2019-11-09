@@ -177,7 +177,7 @@ textarea {
 
 body {
   margin: 0;
-  
+  background: var(--pink-muted);
   overflow-x: hidden;
   width: 100%;
   min-height: 100%;
@@ -377,7 +377,7 @@ a.register-cta:hover {
   right: 3rem;
   font-size: var(--px-26);
   width: 8rem;
-  z-index: 10;
+  z-index: 14;
 }
 
 @media (max-width: 600px) {
@@ -476,6 +476,17 @@ footer {
   margin-bottom: 0;
   overflow: hidden;
   z-index: 11;
+}
+
+@media (max-width: 600px) {
+  footer {
+    overflow-x: hidden;
+    overflow: visible;
+    height: 40rem;
+  }
+  footer::before {
+    right: -1rem;
+  }
 }
 
 footer .left {
@@ -594,7 +605,7 @@ footer p {
 .white-angle-area::before {
   content: "";
   position: absolute;
-  width: 110%;
+  width: 120%;
   background: white;
   transform: rotate(-2.5deg);
   right: -2rem;
@@ -690,6 +701,7 @@ ul.tick-list {
 
 select {
   padding: 0.3rem 0.4rem;
+  max-width: 80%;
 }
 
 #sign-up input[type="text"],
