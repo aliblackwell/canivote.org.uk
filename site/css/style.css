@@ -17,6 +17,8 @@
   --green: #108a00;
   --green-muted: #095200;
   --black: #101010;
+  --border-grey: #707070;
+  --dc-outline-focus: #ffbf47;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -258,6 +260,8 @@ a.register-cta:visited {
   padding: 0.5rem 1rem;
   line-height: 1;
   margin: 1rem 1rem 0;
+  position: relative;
+  z-index: 15;
 }
 a.register-cta:active,
 a.register-cta:hover {
@@ -585,6 +589,7 @@ footer p {
   padding: 7.5rem 0 0;
   position: relative;
   bottom: 2rem;
+  z-index: 1;
 }
 .white-angle-area::before {
   content: "";
@@ -654,6 +659,7 @@ ul.tick-list {
 #sign-up form {
   max-width: 80%;
   text-align: left;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 600px) {
@@ -674,9 +680,43 @@ ul.tick-list {
   margin-top: 1rem;
 }
 
-#sign-up input {
+#sign-up input[type="text"],
+#sign-up input[type="number"],
+#sign-up input[type="email"] {
   display: block;
   width: 100%;
+  padding: 0.3rem 0.4rem;
 }
 
-#sign-up
+select {
+  padding: 0.3rem 0.4rem;
+}
+
+#sign-up input[type="text"],
+#sign-up input[type="number"],
+#sign-up input[type="email"],
+select {
+  border: 1px solid var(--border-grey);
+}
+
+*:focus {
+  outline: 4px solid var(--dc-outline-focus);
+}
+
+input[type="submit"] {
+  background: var(--green);
+  color: white;
+  border: none;
+  color: white;
+  padding: 0.4rem 1rem;
+  display: inline-block;
+  width: auto;
+  font-size: var(--default-20px);
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+input[type="submit"]:active,
+input[type="submit"]:hover {
+  background: var(--green-muted);
+}
