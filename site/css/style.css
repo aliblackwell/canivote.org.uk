@@ -702,6 +702,8 @@ ul.tick-list {
 select {
   padding: 0.3rem 0.4rem;
   max-width: 80%;
+  background: white;
+  -webkit-appearance: none;
 }
 
 #sign-up input[type="text"],
