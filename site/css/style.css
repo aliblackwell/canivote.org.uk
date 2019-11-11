@@ -6,6 +6,7 @@
   --px-45-lh: 1.1;
   --px-26: 1.25rem;
   --default-20px: 18px;
+  --px-16: 0.9rem;
   --top-space: 6rem;
   --line-height: 1.2;
   --content-width: 1100px;
@@ -259,7 +260,7 @@ a.register-cta:visited {
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   line-height: 1;
-  margin: 1rem 1rem 0;
+  margin: 1.5rem 1rem 0;
   position: relative;
   z-index: 15;
 }
@@ -292,8 +293,8 @@ a.register-cta:hover {
   color: white;
   font-size: var(--px-45);
   line-height: var(--px-45-lh);
-  margin: 1.75rem auto 1.5rem;
-  max-width: 45rem;
+  margin: 1.75rem auto 1rem;
+  max-width: 42rem;
 }
 
 .country h2.title {
@@ -372,7 +373,7 @@ a.register-cta:hover {
 /* Sharer */
 
 .sharer {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   right: 3rem;
   font-size: var(--px-26);
@@ -420,12 +421,12 @@ a.register-cta:hover {
   padding: 0.35em 0.5em;
   color: white;
   background: white;
-  text-transform: uppercase;
   margin: 3rem 0 0 0;
   width: 10rem;
   margin-left: -2.6rem;
   border: solid var(--pink-muted) var(--border-width);
   list-style: none;
+  transition: all 0.5s ease-in;
 }
 
 .sharer li {
@@ -471,7 +472,7 @@ footer::before {
 }
 footer {
   width: 100%;
-  height: 20rem;
+  height: 16rem;
   position: relative;
   margin-bottom: 0;
   overflow: hidden;
@@ -496,7 +497,7 @@ footer .left {
 
 footer img {
   position: relative;
-  top: 15rem;
+  top: 10.6rem;
   float: right;
   max-width: 10rem;
 }
@@ -512,6 +513,7 @@ footer p {
   position: relative;
   top: 9rem;
   text-align: left;
+  font-size: var(--px-16);
 }
 
 @media (max-width: 900px) {
@@ -537,7 +539,7 @@ footer p {
 
   footer p {
     top: 10rem;
-    font-size: var(--default-20px);
+    font-size: var(--px-16);
     line-height: var(--line-height);
   }
   .country footer p {
@@ -568,6 +570,7 @@ footer p {
   height: 100%;
   padding-top: var(--top-space);
   text-align: center;
+  margin-bottom: 4rem;
 }
 
 .result h1 {
@@ -599,7 +602,7 @@ footer p {
   background: transparent;
   padding: 7.5rem 0 0;
   position: relative;
-  bottom: 2rem;
+  bottom: 6rem;
   z-index: 1;
 }
 .white-angle-area::before {
@@ -615,8 +618,8 @@ footer p {
 
 .white-angle-area ul {
   position: relative;
-  width: 40rem;
-  margin: 0 auto;
+  width: 39rem;
+  margin: 1rem auto 0;
 }
 
 .white-angle-area ul li {
@@ -625,12 +628,12 @@ footer p {
   margin-bottom: 0.75em;
   line-height: 1.1;
   max-width: 40em;
-  padding: 1em 0 0 3.8em;
+  padding: 0em 0 0 3.4em;
   background-image: url("../img/tick.svg");
-  background-position: 6px 9px;
+  background-position: top left;
   background-repeat: no-repeat;
   min-height: 3.7em;
-  background-size: 2.5em;
+  background-size: 2.25em;
   display: inline-block;
 }
 
@@ -651,7 +654,7 @@ ul.tick-list {
   padding: 3rem 6rem 10rem;
   width: 38rem;
   text-align: left;
-  margin: 4rem auto -15rem;
+  margin: 3rem auto -15rem;
   position: relative;
   z-index: 10;
 }
@@ -668,9 +671,9 @@ ul.tick-list {
 }
 
 #sign-up form {
-  max-width: 80%;
+  max-width: 90%;
   text-align: left;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
 }
 
 @media (max-width: 600px) {
@@ -684,7 +687,7 @@ ul.tick-list {
 }
 
 #sign-up label {
-  font-size: 1rem;
+  font-size: var(--px-16);
   margin: 0;
   display: inline-block;
   width: 100%;
@@ -727,8 +730,12 @@ input[type="submit"] {
   display: inline-block;
   width: auto;
   font-size: var(--default-20px);
-  margin-top: 0.5rem;
+  margin-top: 0.9rem;
   cursor: pointer;
+}
+
+.country input[type=submit] {
+  display: block;
 }
 
 input[type="submit"]:active,

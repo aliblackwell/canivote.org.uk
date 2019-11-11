@@ -8,15 +8,6 @@ module.exports = function(config) {
   config.addPassthroughCopy("./site/humans.txt")
   config.addPassthroughCopy("./site/favicon.png")
 
-  config.addFilter("alphabeticize", function(value) {
-    value.sort(function(a, b) {
-      var textA = a.name.common.toUpperCase()
-      var textB = b.name.common.toUpperCase()
-      return textA < textB ? -1 : textA > textB ? 1 : 0
-    })
-    return value
-  })
-
   return {
     dir: {
       input: "site",

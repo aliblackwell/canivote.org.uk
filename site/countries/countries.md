@@ -3,8 +3,8 @@ pagination:
   data: countries
   size: 1
   alias: country
-permalink: /{{ country.name.common | slug }}/
-title: country.cca3
+permalink: /{{ country.name | slug }}/
+title: country.code
 ---
 
 

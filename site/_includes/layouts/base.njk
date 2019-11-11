@@ -32,11 +32,11 @@
         {{ content | safe }}
         <form id="country-selector" method="get" action="/" autocomplete="off" type="search">
           <label>
-            <h3>Choose your country</h3>
+            
             <select name="country">
-                <option value=""></option>
-              {% for country in countries | alphabeticize %}
-                <option value="{{ country.name.common | slug }}">{{ country.name.common }}</option>
+                <option value="">Choose your country </option>
+              {% for country in countries %}
+                <option value="{{ country.name | slug }}">{{ country.name }}</option>
               {% endfor %}
             </select>
             <input type="submit" value="Can I vote?">
