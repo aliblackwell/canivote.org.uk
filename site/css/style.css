@@ -450,6 +450,8 @@ a.register-cta:hover {
   animation: fadeOut 0.25s both;
 }
 
+
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -484,6 +486,20 @@ a.register-cta:hover {
   color: var(--pink-muted);
   text-decoration: none;
   padding: 0.25rem 0;
+  padding-left: 1.5rem; 
+  background-size: 1rem;
+  background-position: center left;
+  background-repeat:  no-repeat;
+}
+
+.sharer li.fb a {
+  background-image: url('../img/facebook.svg');
+}
+.sharer li.tt a {
+  background-image: url('../img/twitter.svg');
+}
+.sharer li.wa a {
+  background-image: url('../img/whatsapp.svg');
 }
 
 .sharer li a:hover,
