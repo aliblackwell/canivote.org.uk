@@ -71,7 +71,7 @@ issues with your neighbours and make your voice heard">
         <section class="main-content">
           <header class="result">
             <h1 class="ws-bold">Yes!</h1>
-            <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name }} Flag"/>
+            <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
           </header>
           <h2 class="ws-bold title">Citizens of
             {{country.name}}
@@ -94,7 +94,7 @@ issues with your neighbours and make your voice heard">
           <section class="main-content">
             <header class="result">
               <h1 class="ws-bold">No</h1>
-              <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name }} Flag"/>
+              <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
             </header>
             <h2 class="ws-bold title">Citizens of
               {{country.name}}
@@ -109,7 +109,7 @@ issues with your neighbours and make your voice heard">
             <section class="main-content">
               <header class="result">
                 <h1 class="ws-bold">No</h1>
-                <img class="flag" src="/flags/{{ country.cca3 }}.svg" alt="{{ country.name }} Flag"/>
+                <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
               </header>
               <h2 class="ws-bold title">Citizens of
                 {{country.name}}
