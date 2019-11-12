@@ -234,7 +234,6 @@ blockquote {
 .container {
   margin: 0 auto;
   position: relative;
-  overflow-x: hidden;
 }
 
 .content-container {
@@ -245,6 +244,9 @@ blockquote {
 }
 
 @media (max-width: 600px) {
+  .container {
+    overflow-x: hidden;
+  }
   .content-container {
     padding: 0 1rem 0;
   }
