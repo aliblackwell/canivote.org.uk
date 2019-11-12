@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <title>Can I Vote?</title>
-    <meta name="description" content="You don’t have to be a British Citizen to vote in the UK election." />
-    <meta property="og:title" content="Can I Vote?">
-    <meta property="og:site_name" content="Can I Vote?">
-    <meta property="og:url" content="https://www.canivote.org.uk">
-    <meta property="og:description" content="You don’t have to be a British Citizen to vote in the UK election. Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections. ">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="">
-
-    <meta name="twiiter:card" content="summary">
-    <meta name="twitter:title" content="Can I Vote?">
-    <meta name="twitter:description" content="You don’t have to be a British Citizen to vote in the UK election. Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections. ">
-    <meta name="twitter:url" content="https://www.canivote.org.uk">
-    <meta name="twitter:image" content="">
-
+    {% include "partials/default-meta-tags.njk" %}
   </head>
 
   <body class="home ws-medium">
@@ -29,21 +15,25 @@
     <main class="container">
       {% include "partials/sharer.njk" %}
       <section class="main-content" id="can-i-vote">
-        {{ content | safe }}
+        <h1 class="ws-bold"><img src="/img/can-i-vote-tick.svg" alt="Can I vote?"/></h1>
+
+        <h2 class="ws-bold">It's not just British citizens who can vote in UK elections.</h2>
         <form id="country-selector" method="get" action="/" autocomplete="off" type="search">
           <label>
-            
+
             <select name="country">
-                <option value="">Choose your country </option>
+              <option value="">Choose your country
+              </option>
               {% for country in countries %}
                 <option value="{{ country.name | slug }}">{{ country.name }}</option>
               {% endfor %}
             </select>
+
             <input type="submit" value="Can I vote?">
           </label>
         </form>
       </section>
-      {% include "partials/footer.njk" %}
+        {% include "partials/footer.njk" %}
 
     </main>
 

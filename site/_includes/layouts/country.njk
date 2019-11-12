@@ -11,51 +11,21 @@
     {% if country.cw %}
 
       <meta name="description" content="Citizens of {{country.name}} can vote on Thursday December 12th"/>
-      <meta property="og:title" content="Can I Vote?">
-      <meta property="og:site_name" content="Can I Vote?">
+      <meta property="og:title" content="Can I Vote: {{country.name}}">
+      <meta property="og:site_name" content="Can I Vote">
       <meta property="og:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/">
       <meta property="og:description" content="Citizens of {{country.name}} can vote on Thursday December 12th">
       <meta property="og:type" content="website">
-      <meta property="og:image" content="">
+      <meta property="og:image" content="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
 
       <meta name="twiiter:card" content="summary">
-      <meta name="twitter:title" content="Can I Vote?">
+      <meta name="twitter:title" content="Can I Vote: {{country.name}}">
       <meta name="twitter:description" content="Citizens of {{country.name}} can vote on Thursday December 12th">
       <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/">
-      <meta name="twitter:image" content="">
+      <meta name="twitter:image" content="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
 
-    {% elseif country.eu %}
-
-      <meta name="description" content="Citizens of {{country.name}} can't vote on Thursday December 12th, but can vote in local, European and some regional elections."/>
-      <meta property="og:title" content="Can I Vote?">
-      <meta property="og:site_name" content="Can I Vote?">
-      <meta property="og:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/">
-      <meta property="og:description" content="Citizens of {{country.name}} can't vote on Thursday December 12th, but can vote in local, European and some regional elections."">
-      <meta property="og:type" content="website">
-      <meta property="og:image" content="">
-
-      <meta name="twiiter:card" content="summary">
-      <meta name="twitter:title" content="Can I Vote?">
-      <meta name="twitter:description" content="You don’t have to be a British Citizen to vote in the UK election. Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections. ">
-      <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/">
-      <meta name="twitter:image" content="">
     {% else %}
-      <meta name="description" content="Citizens of {{country.name}} can't vote in UK elections, but can still participate in the community, take action on 
-issues with your neighbours and make your voice heard"/>
-      <meta property="og:title" content="Can I Vote?">
-      <meta property="og:site_name" content="Can I Vote?">
-      <meta property="og:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/">
-      <meta property="og:description" content="Citizens of {{country.name}} can't vote in UK elections, but can still participate in the community, take action on 
-issues with your neighbours and make your voice heard">
-      <meta property="og:type" content="website">
-      <meta property="og:image" content="">
-
-      <meta name="twiiter:card" content="summary">
-      <meta name="twitter:title" content="Can I Vote?">
-      <meta name="twitter:description" content="Citizens of {{country.name}} can't vote in UK elections, but can still participate in the community, take action on 
-issues with your neighbours and make your voice heard">
-      <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/">
-      <meta name="twitter:image" content="">
+      {% include "partials/default-meta-tags.njk" %}
     {% endif %}
 
     <title>Can I Vote – {{country.name}}</title>
