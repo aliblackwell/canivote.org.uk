@@ -38,7 +38,8 @@ fs.readFile(allCountries, { encoding: "utf-8" }, function(err, data) {
         },
         function(err, data) {
           let cw = JSON.parse(data)
-          handleCountries(all, eu, cw)
+          //handleCountries(all, eu, cw)
+          handleCommonwealth(all, cw)
         }
       )
     }
@@ -49,12 +50,10 @@ function handleCountries(all, eu, cw) {
   let countries = []
   let sortableCountries = new Array()
 
-  console.log(typeof sortableCountries)
   for (let i = 0; i < all.length; i++) {
     sortableCountries.push(all[i])
   }
   let finishedCountries = new Array()
-  console.log(finishedCountries.sort())
   for (let i = 0; i < all.length; i++) {
     let country = {
       name: all[i].name.common,
@@ -71,6 +70,33 @@ function handleCountries(all, eu, cw) {
 
   fs.writeFile(
     "countries.json",
+    JSON.stringify(finishedCountries),
+    handlingFinished
+  )
+}
+
+function handleCommonwealth(all, cw) {
+  let countries = []
+  let sortableCountries = new Array()
+
+  for (let i = 0; i < all.length; i++) {
+    sortableCountries.push(all[i])
+  }
+  let finishedCountries = new Array()
+  for (let i = 0; i < all.length; i++) {
+    let country = {
+      name: all[i].name.common,
+      code: all[i].cca3.toLowerCase(),
+      flag: `${all[i].cca3.toLowerCase()}.svg`
+    }
+    if (cw.includes(all[i].name.common)) {
+      finishedCountries.push(country)
+    }
+  }
+  finishedCountries.sort(dynamicSort("name"))
+
+  fs.writeFile(
+    "cw-sorted-actual.json",
     JSON.stringify(finishedCountries),
     handlingFinished
   )

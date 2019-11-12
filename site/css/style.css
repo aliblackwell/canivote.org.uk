@@ -86,6 +86,7 @@ Core breakpoints
     --px-35: 1.1rem;
     --px-45: 1.4rem;
     --px-52: 1.6rem;
+    --px-149: 3.8rem;
     --content-width: 90%;
   }
 }
@@ -233,6 +234,7 @@ blockquote {
 .container {
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 .content-container {
@@ -299,6 +301,13 @@ a.register-cta:hover {
 
 .country h2.title {
   color: var(--black);
+}
+
+@media (max-width: 600px) {
+  #can-i-vote h2,
+  .country h2.title {
+    max-width: 95%;
+  }
 }
 
 .country h3.title {
@@ -438,7 +447,7 @@ a.register-cta:hover {
   display: block;
   color: var(--pink-muted);
   text-decoration: none;
-  padding: 0.25rem 0
+  padding: 0.25rem 0;
 }
 
 .sharer li a:hover,
@@ -481,9 +490,8 @@ footer {
 
 @media (max-width: 600px) {
   footer {
-    overflow-x: hidden;
-    overflow: visible;
-    height: 40rem;
+    height: 25rem;
+    overflow: hidden;
   }
   footer::before {
     right: -1rem;
@@ -563,6 +571,7 @@ footer p {
   display: inline-block;
   border: var(--border-width) solid var(--pink-muted);
   height: auto;
+  background: var(--pink-muted);
 }
 
 .country .main-content {
@@ -580,13 +589,13 @@ footer p {
   font-size: var(--px-149);
   background: white;
   float: left;
-  padding: 0rem 2.5rem;
+  padding: 0.3rem 2.5rem;
   line-height: 1;
 }
 
 .result img {
-  display: inline-block;
   vertical-align: bottom;
+  float: right;
   margin: 0;
   border-left: var(--border-width) solid var(--pink-muted);
   height: var(--flag-height);
@@ -594,7 +603,7 @@ footer p {
 
 @media (max-width: 480px) {
   .result h1 {
-    padding: 0.3rem 1.5rem;
+    padding: 0.4rem 1.5rem;
   }
 }
 
@@ -614,6 +623,9 @@ footer p {
   right: -2rem;
   bottom: -5rem;
   height: 100%;
+}
+
+@media (max-width: 600px) {
 }
 
 .white-angle-area ul {
@@ -647,7 +659,7 @@ footer p {
 }
 ul.tick-list {
   padding-left: 0;
-  text-align:left;
+  text-align: left;
 }
 #sign-up {
   background: var(--pink-transparent);
@@ -732,9 +744,12 @@ input[type="submit"] {
   font-size: var(--default-20px);
   margin-top: 0.9rem;
   cursor: pointer;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
-.country input[type=submit] {
+.country input[type="submit"] {
   display: block;
 }
 
