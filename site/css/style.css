@@ -274,6 +274,24 @@ a.register-cta:hover {
   text-decoration: none;
 }
 
+.wa-desktop {
+  display: block;
+}
+
+.wa-mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .wa-desktop {
+    display: none;
+  }
+  
+  .wa-mobile {
+    display: block;
+  }
+}
+
 /* Homepage */
 
 #can-i-vote {
