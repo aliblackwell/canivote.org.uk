@@ -24,7 +24,6 @@
       <meta name="twitter:description" content="Citizens of {{country.name}} can vote on December 12th."/>
       <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/"/>
       <meta name="twitter:image" content="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png"/>
-      <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png"> <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject"> <link itemprop="url" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png"> </span>
     {% else %}
       {% include "partials/default-meta-tags.njk" %}
     {% endif %}
@@ -33,6 +32,10 @@
   </head>
 
   <body class="country ws-medium">
+    <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
+    <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
+      <link itemprop="url" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
+    </span>
 
     <main class="container">
 
