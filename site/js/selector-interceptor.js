@@ -5,7 +5,12 @@ function handleCountrySelection(event) {
   event.stopImmediatePropagation()
 
   let country = event.target[0].value
-  let finalPath = `/${country}/`
+  let path = window.location.pathname
+  let lastChar = path.charAt(path.length - 1)
+  if (lastChar != "/") {
+    path = `${path}/`
+  }
+  let finalPath = `${path}${country}/`
   window.location = finalPath
 }
 
