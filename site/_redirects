@@ -1,1 +1,2 @@
 / country=:country  /:country  301
+/bn country=:country  /bn/:country  301
