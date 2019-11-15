@@ -4,7 +4,6 @@ pagination:
   size: 1
   alias: country
 permalink: /{{ country.name | slug }}/
-title: country.code
 ---
 
 
