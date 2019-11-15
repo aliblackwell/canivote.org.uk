@@ -11,6 +11,7 @@
   --line-height: 1.2;
   --content-width: 1100px;
   --border-width: 0.5rem;
+  --small-border-width: 3px;
   --flag-height: 6.6rem;
   --pink: #e60050;
   --pink-muted: #93183e;
@@ -265,9 +266,11 @@ blockquote {
 
 @media (max-width: 600px) {
   .logo {
-    top: 4.74rem;
-    left: 0;
-    margin: 0 auto;
+    top: 1rem;
+    left: 1rem;
+  }
+  .logo img {
+    height: 50px;
   }
 }
 
@@ -303,7 +306,7 @@ a.register-cta:hover {
   .wa-desktop {
     display: none;
   }
-  
+
   .wa-mobile {
     display: block;
   }
@@ -332,7 +335,7 @@ a.register-cta:hover {
   color: white;
   font-size: var(--px-45);
   line-height: var(--px-45-lh);
-  margin: 1.75rem auto 1rem;
+  margin: 1.35rem auto 1rem;
   max-width: 42rem;
 }
 
@@ -436,7 +439,7 @@ a.register-cta:hover {
 }
 
 .sharer button {
-  border: 3px solid white;
+  border: var(--small-border-width) solid white;
   padding: 0.35em 1.75em 0.35em 0.5em;
   color: white;
   background: transparent;
@@ -470,7 +473,7 @@ a.register-cta:hover {
   margin: 3rem 0 0 0;
   width: 10rem;
   margin-left: -2.6rem;
-  border: solid var(--pink-muted) var(--border-width);
+  border: solid var(--pink-muted) var(--small-border-width);
   list-style: none;
   transition: all 0.25s ease;
   position: relative;
@@ -484,8 +487,6 @@ a.register-cta:hover {
   transition: all 0.5s ease;
   animation: fadeOut 0.25s both;
 }
-
-
 
 @keyframes fadeIn {
   0% {
@@ -521,20 +522,20 @@ a.register-cta:hover {
   color: var(--pink-muted);
   text-decoration: none;
   padding: 0.25rem 0;
-  padding-left: 1.5rem; 
+  padding-left: 1.5rem;
   background-size: 1rem;
   background-position: center left;
-  background-repeat:  no-repeat;
+  background-repeat: no-repeat;
 }
 
 .sharer li.fb a {
-  background-image: url('../img/facebook.svg');
+  background-image: url("../img/facebook.svg");
 }
 .sharer li.tt a {
-  background-image: url('../img/twitter.svg');
+  background-image: url("../img/twitter.svg");
 }
 .sharer li.wa a {
-  background-image: url('../img/whatsapp.svg');
+  background-image: url("../img/whatsapp.svg");
 }
 
 .sharer li a:hover,
@@ -543,7 +544,7 @@ a.register-cta:hover {
 }
 .country .sharer button,
 .country .sharer ul {
-  border: 3px solid var(--pink-muted);
+  border: var(--small-border-width) solid var(--pink-muted);
   color: var(--pink-muted);
 }
 
