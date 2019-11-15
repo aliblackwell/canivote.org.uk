@@ -34,3 +34,8 @@ function sharePage() {
   }
   sharer.classList.toggle("hidden")
 }
+
+
+cssVars({
+  include: 'link'
+});
