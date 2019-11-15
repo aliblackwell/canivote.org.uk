@@ -35,11 +35,13 @@
     <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
     <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
       <link itemprop="url" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
-    </span>
+    </span>]
+
+    {% include "partials/skip-to-content.njk" %}
 
     <main class="container">
 
-      {% include "partials/sharer.njk" %}
+      
 
       <header>
         <h1 class="logo"><a href="/" title="Can I vote?"><img src="/img/can-i-vote-tick-burgandy.svg" alt="Can I vote?" /></a></h1>
@@ -48,7 +50,7 @@
       {% if country.cw %}
         <section class="main-content">
           <header class="result">
-            <h1 class="ws-bold">Yes!</h1>
+            <h1 class="ws-bold"  id="content">Yes!</h1>
             <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
           </header>
           <h2 class="ws-bold title">Citizens of
@@ -120,7 +122,7 @@
           </form>
         </article>
       </section>
-
+      {% include "partials/sharer.njk" %}
       {% include "partials/footer.njk" %}
 
     </main>
