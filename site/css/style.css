@@ -328,6 +328,7 @@ a.register-cta:hover {
   width: 40rem;
   margin: 0 auto;
   padding-top: var(--top-space);
+  padding-top: 25vh;
 }
 
 #can-i-vote h2,
@@ -343,10 +344,35 @@ a.register-cta:hover {
   color: var(--black);
 }
 
+#country-selector {
+  margin-bottom: 0vh;
+}
+
+@media (min-width: 1600px) {
+  #country-selector {
+    margin-bottom: 25vh;
+  }
+}
+
+@media (min-height: 1000px) {
+  #country-selector {
+    margin-bottom: 25vh;
+  }
+}
+
 @media (max-width: 600px) {
   #can-i-vote h2,
   .country h2.title {
     max-width: 95%;
+  }
+
+  #country-selector {
+    margin-bottom: 0;
+  }
+
+  #can-i-vote h1 {
+    padding-top: var(--top-space);
+ 
   }
 }
 
@@ -407,9 +433,7 @@ a.register-cta:hover {
   background-size: cover;
 }
 
-#country-selector {
-  margin-bottom: 0rem;
-}
+
 
 #country-selector label h3 {
   font-size: var(--default-20px);
