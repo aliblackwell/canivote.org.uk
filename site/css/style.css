@@ -454,11 +454,32 @@ a.register-cta:hover {
   z-index: 14;
 }
 
+.translate-section {
+  right: 14rem;
+  top:2rem;
+  z-index: 9;
+}
+
 @media (max-width: 600px) {
   .sharer {
     width: 6rem;
     top: 1rem;
     right: 1rem;
+  }
+
+  .translate-section {
+    right: 11rem;
+    top:1rem;
+    z-index: 9;
+  }
+}
+
+@media (max-width:480px) {
+
+  .translate-section {
+    right: 3.5rem;
+    top:5rem;
+    z-index: 9;
   }
 }
 
@@ -507,7 +528,7 @@ a.register-cta:hover {
 }
 
 .sharer ul.hidden {
-  top: -13rem;
+  margin-top: -13rem;
   transition: all 0.5s ease;
   animation: fadeOut 0.25s both;
 }
