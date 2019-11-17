@@ -6,6 +6,7 @@ pagination:
 permalink: /ur/{{ country.name | slug }}/
 language: 'ur'
 basePermalink: '/ur/'
+dir: 'rtl'
 ---
 
 

@@ -6,6 +6,7 @@ pagination:
 permalink: /si/{{ country.name | slug }}/
 language: 'si'
 basePermalink: '/si/'
+dir: 'ltr'
 ---
 
 

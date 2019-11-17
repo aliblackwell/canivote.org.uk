@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{language}}"  dir="{{dir}}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
     {% include "partials/default-meta-tags.njk" %}
   </head>
 
-  <body class="home ws-medium">
+  <body class="home ws-medium dir-{{dir}} script-{{language}}">
 
     {% include "partials/skip-to-content.njk" %}
     <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/can-i-vote.png">

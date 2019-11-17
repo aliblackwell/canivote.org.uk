@@ -6,6 +6,7 @@
   --px-45-lh: 1.1;
   --px-26: 1.25rem;
   --default-20px: 18px;
+  --larger-script-22px: 22px;
   --px-16: 0.9rem;
   --top-space: 6rem;
   --line-height: 1.2;
@@ -58,6 +59,7 @@ Core breakpoints
 @media (max-width: 900px) {
   :root {
     --default-20px: 16px;
+    --larger-script-22px: 20px;
     --px-26: 1.1rem;
     --px-35: 1.25rem;
     --px-45: 2rem;
@@ -147,13 +149,18 @@ Core breakpoints
 
 html {
   box-sizing: border-box;
-  font-size: var(--default-20px);
+  font-size: var(--larger-script-22px);
   line-height: var(--line-height);
   text-rendering: optimizeLegibility;
   margin: 0;
   width: 100%;
   height: 100%;
 }
+
+html.script-en {
+  font-size: var(--default-20px);
+}
+
 *,
 *:before,
 *:after {
@@ -264,6 +271,10 @@ blockquote {
   width: 15rem;
 }
 
+.dir-rtl .logo {
+  float: left;
+}
+
 @media (max-width: 600px) {
   .logo {
     top: 1rem;
@@ -372,7 +383,6 @@ a.register-cta:hover {
 
   #can-i-vote h1 {
     padding-top: var(--top-space);
- 
   }
 }
 
@@ -434,15 +444,6 @@ a.register-cta:hover {
 }
 
 
-
-#country-selector label h3 {
-  font-size: var(--default-20px);
-  text-transform: uppercase;
-  text-align: center;
-  margin: 1rem 0 1rem 0;
-  color: white;
-}
-
 /* Sharer */
 
 .sharer {
@@ -456,7 +457,7 @@ a.register-cta:hover {
 
 .translate-section {
   right: 14rem;
-  top:2rem;
+  top: 2rem;
   z-index: 9;
 }
 
@@ -469,16 +470,21 @@ a.register-cta:hover {
 
   .translate-section {
     right: 11rem;
-    top:1rem;
+    top: 1rem;
     z-index: 9;
+  }
+
+  .home .translate-section {
+    right: auto;
+    top: 1rem;
+    left: 1rem;
   }
 }
 
-@media (max-width:480px) {
-
+@media (max-width: 480px) {
   .translate-section {
     right: 3.5rem;
-    top:5rem;
+    top: 5rem;
     z-index: 9;
   }
 }
@@ -573,6 +579,13 @@ a.register-cta:hover {
   background-repeat: no-repeat;
 }
 
+.dir-rtl .sharer li a,
+.dir-rtl .sharer li a:visited {
+  padding: 0.25rem 0 0;
+  padding-right: 1.5rem;
+  background-position: center right;
+}
+
 .sharer li.fb a {
   background-image: url("../img/facebook.svg");
 }
@@ -623,7 +636,7 @@ footer {
 
 @media (max-width: 600px) {
   footer {
-    height: 28rem;
+    height: 35rem;
     overflow: hidden;
   }
   footer::before {
@@ -657,6 +670,10 @@ footer p {
   font-size: var(--px-16);
 }
 
+.dir-rtl footer p {
+  text-align: right;
+}
+
 @media (max-width: 900px) {
   footer .left {
     width: 100%;
@@ -683,7 +700,6 @@ footer p {
     font-size: var(--px-16);
     line-height: var(--line-height);
   }
-
 }
 
 /* Country page */
@@ -772,6 +788,15 @@ footer p {
   display: inline-block;
 }
 
+.dir-rtl .white-angle-area ul {
+  text-align: right;
+}
+
+.dir-rtl .white-angle-area ul li {
+  padding: 0 3.43em 0 0;
+  background-position: top right;
+}
+
 @media (max-width: 600px) {
   .white-angle-area ul li {
   }
@@ -794,6 +819,10 @@ ul.tick-list {
   z-index: 10;
 }
 
+.dir-rtl #sign-up {
+  text-align: right;
+}
+
 #sign-up h1 {
   margin: 0;
   margin-bottom: 1rem;
@@ -802,13 +831,16 @@ ul.tick-list {
 
 #sign-up h2 {
   margin: 0;
-  font-size: var(--default-20px);
 }
 
 #sign-up form {
   max-width: 90%;
   text-align: left;
   margin-bottom: 0rem;
+}
+
+.dir-rtl #sign-up form {
+  text-align: right;
 }
 
 @media (max-width: 600px) {
@@ -864,7 +896,6 @@ input[type="submit"] {
   padding: 0.4rem 1rem;
   display: inline-block;
   width: auto;
-  font-size: var(--default-20px);
   margin-top: 0.9rem;
   cursor: pointer;
   border-radius: 0;

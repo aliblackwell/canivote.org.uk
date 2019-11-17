@@ -2,8 +2,8 @@
 title: Can I Vote
 subtitle: Can I?
 layout: layouts/base.njk 
-language: 'en'
-permalink: '/'
+permalink: /hi/
+language: 'hi'
 dir: 'ltr'
 ---
 
