@@ -26,17 +26,17 @@
         <h2 class="ws-bold">{{words["main.not-just-british-citizens"]}}</h2>
         <form id="country-selector" method="get" action="/" autocomplete="off" type="search">
           <label class="screen-reader-text" for="id_country">
-            Choose your country
+            {{words[language]['main.choose-country']}}
           </label>
           <select name="country" labelledby="id_country" id="id_country">
-            <option value="" aria-hidden="true">Choose your country
+            <option value="" aria-hidden="true">{{words[language]['main.choose-country']}}
             </option>
             {% for country in countries %}
               <option value="{{ country.name | slug }}">{{ country.name }}</option>
             {% endfor %}
           </select>
 
-          <input type="submit" value="Can I vote?">
+          <input type="submit" value="{{words[language]['form.submit']}}">
         </label>
       </form>
     </section>
