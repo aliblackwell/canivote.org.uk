@@ -62,7 +62,12 @@
         <section class="white-angle-area">
           <div class="content-container">
             <ul class="ws-semibold tick-list">
+            {% if country.name === "Hong Kong" %}
+            <li>Former residents of Hong Kong (born before 1997) who hold a British Dependent Territories, British Nationals (Overseas) or British Overseas passport qualify for registration.</li>
+            {% else %}
               <li>Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections.</li>
+
+            {%endif%}
               <li>You don’t have to bring any ID documents with you to the polls.
               </li>
               <li>You won’t be asked any immigration or benefits related questions at any polling stations.

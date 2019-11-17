@@ -578,7 +578,7 @@ footer {
 
 @media (max-width: 600px) {
   footer {
-    height: 25rem;
+    height: 28rem;
     overflow: hidden;
   }
   footer::before {
@@ -638,17 +638,7 @@ footer p {
     font-size: var(--px-16);
     line-height: var(--line-height);
   }
-  .country footer p {
-    top: 15rem;
-  }
 
-  .country footer img {
-    top: 14rem;
-  }
-
-  .country footer {
-    height: 40rem;
-  }
 }
 
 /* Country page */
