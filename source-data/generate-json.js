@@ -82,8 +82,8 @@ fs.readFile(allCountries, { encoding: "utf-8" }, function(err, data) {
         },
         function(err, data) {
           let cw = JSON.parse(data)
-          //handleCountries(all, eu, cw)
-          handleCommonwealth(all, cw)
+          handleCountries(all, eu, cw)
+          //handleCountries(all, cw)
         }
       )
     }
@@ -91,7 +91,6 @@ fs.readFile(allCountries, { encoding: "utf-8" }, function(err, data) {
 })
 
 function handleCountries(all, eu, cw) {
-  let countries = []
   let sortableCountries = new Array()
 
   for (let i = 0; i < all.length; i++) {

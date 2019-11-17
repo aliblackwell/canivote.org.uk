@@ -11,37 +11,42 @@
   </head>
 
   <body class="home ws-medium">
+
+    {% include "partials/skip-to-content.njk" %}
     <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/can-i-vote.png">
     <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
       <link itemprop="url" href="https://www.canivote.org.uk/img/can-i-vote.png">
     </span>
 
     <main class="container">
-      {% include "partials/sharer.njk" %}
+      
       <section class="main-content" id="can-i-vote">
         <h1 class="ws-bold"><img src="/img/can-i-vote-tick.svg" alt="Can I vote?"/></h1>
 
         <h2 class="ws-bold">{{words["main.not-just-british-citizens"]}}</h2>
         <form id="country-selector" method="get" action="/" autocomplete="off" type="search">
-          <label>
-
-            <select name="country">
-              <option value="">Choose your country
-              </option>
-              {% for country in countries %}
-                <option value="{{ country.name | slug }}">{{ country.name }}</option>
-              {% endfor %}
-            </select>
-
-            <input type="submit" value="Can I vote?">
+          <label class="screen-reader-text" for="id_country">
+            Choose your country
           </label>
-        </form>
-      </section>
-      {% include "partials/footer.njk" %}
+          <select name="country" labelledby="id_country" id="id_country">
+            <option value="" aria-hidden="true">Choose your country
+            </option>
+            {% for country in countries %}
+              <option value="{{ country.name | slug }}">{{ country.name }}</option>
+            {% endfor %}
+          </select>
 
-    </main>
+          <input type="submit" value="Can I vote?">
+        </label>
+      </form>
+    </section>
+    {% include "partials/sharer.njk" %}
+    {% include "partials/footer.njk" %}
 
-    <script src="/js/selector-interceptor.js"></script>
-  </body>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+  <script src="/js/selector-interceptor.js"></script>
+
+</body>
 
 </html>

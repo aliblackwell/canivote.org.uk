@@ -37,9 +37,11 @@
       <link itemprop="url" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
     </span>
 
+    {% include "partials/skip-to-content.njk" %}
+
     <main class="container">
 
-      {% include "partials/sharer.njk" %}
+      
 
       <header>
         <h1 class="logo"><a href="/" title="Can I vote?"><img src="/img/can-i-vote-tick-burgandy.svg" alt="Can I vote?" /></a></h1>
@@ -48,7 +50,7 @@
       {% if country.cw %}
         <section class="main-content">
           <header class="result">
-            <h1 class="ws-bold">Yes!</h1>
+            <h1 class="ws-bold"  id="content">Yes!</h1>
             <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
           </header>
           <h2 class="ws-bold title">Citizens of
@@ -60,7 +62,12 @@
         <section class="white-angle-area">
           <div class="content-container">
             <ul class="ws-semibold tick-list">
+            {% if country.name === "Hong Kong" %}
+            <li>Former residents of Hong Kong (born before 1997) who hold a British Dependent Territories, British Nationals (Overseas) or British Overseas passport qualify for registration.</li>
+            {% else %}
               <li>Commonwealth nationals with leave to enter or leave to remain in the UK are eligible to vote in all UK elections.</li>
+
+            {%endif%}
               <li>You don’t have to bring any ID documents with you to the polls.
               </li>
               <li>You won’t be asked any immigration or benefits related questions at any polling stations.
@@ -120,11 +127,11 @@
           </form>
         </article>
       </section>
-
+      {% include "partials/sharer.njk" %}
       {% include "partials/footer.njk" %}
 
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
     <script src="/js/selector-interceptor.js"></script>
   </body>
 
