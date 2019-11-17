@@ -5,7 +5,7 @@ function handleCountrySelection(event) {
   event.stopImmediatePropagation()
 
   let country = event.target[0].value
-  let finalPath = `/${country}/`
+  let finalPath = "/" + country + "/"
   window.location = finalPath
 }
 
@@ -36,6 +36,4 @@ function sharePage() {
 }
 
 
-cssVars({
-  include: 'link'
-});
+cssVars();
