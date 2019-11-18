@@ -13,6 +13,8 @@
   "result.yes": "हाँ!",
   "result.no": "नहीं",
   "result.citizens-of": "के नागरिक",
+  "result.result-yes": "can vote on Thursday December 12th",
+  "result.result-no": "can't vote on Thursday December 12th",
   "result.result": "गुरुवार 12 दिसंबर को मतदान नहीं कर सकते",
   "result.no-subtitle": "लेकिन इसका मतलब यह नहीं है कि आप लोकतंत्र में भाग नहीं ले सकते.",
   "result.eu-subtitle": "लेकिन आप स्थानीय, यूरोपीय और कुछ क्षेत्रीय चुनावों में मतदान कर सकते हैं.",
