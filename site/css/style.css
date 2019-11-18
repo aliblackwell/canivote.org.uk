@@ -269,7 +269,7 @@ blockquote {
   margin: 0;
   top: 2rem;
   left: 3rem;
-  width: 15rem;
+  width: 9rem;
 }
 
 .dir-rtl .logo {
@@ -361,6 +361,7 @@ a.register-cta:hover {
   font-size: var(--px-45);
   margin: 1.35rem auto 1rem;
   max-width: 42rem;
+  line-height: 1.2;
 }
 
 .script-en #can-i-vote h2,
