@@ -273,7 +273,8 @@ blockquote {
 }
 
 .dir-rtl .logo {
-  float: left;
+ left: auto;
+ right: 3rem;
 }
 
 @media (max-width: 600px) {
@@ -466,11 +467,26 @@ a.register-cta:hover {
   z-index: 9;
 }
 
-@media (max-width: 600px) {
+.dir-rtl .sharer {
+  right: auto;
+  left: 3rem;
+}
+
+.dir-rtl .translate-section {
+  right: auto;
+  left: 14rem;
+}
+
+@media (max-width: 900px) {
   .sharer {
     width: 6rem;
     top: 1rem;
     right: 1rem;
+  }
+
+  .dir-rtl .sharer {
+    right: auto;
+    left: 1rem;
   }
 
   .translate-section {
@@ -478,11 +494,31 @@ a.register-cta:hover {
     top: 1rem;
     z-index: 9;
   }
+  .dir-rtl .translate-section {
+    right: auto;
+    left: 11rem;
+  }
+
+  .translate-section {
+    right: 3.5rem;
+    top: 5rem;
+    z-index: 9;
+  }
+
+  .dir-rtl .translate-section {
+    right: auto;
+    left: 3.5rem;
+  }
 
   .home .translate-section {
     right: auto;
     top: 1rem;
     left: 1rem;
+  }
+
+  .dir-rtl.home .translate-section {
+    left: auto;
+    right: 1rem;
   }
 }
 
@@ -491,6 +527,10 @@ a.register-cta:hover {
     right: 3.5rem;
     top: 5rem;
     z-index: 9;
+  }
+  .dir-rtl .translate-section {
+    right: auto;
+    left: 3.5rem;
   }
 }
 
