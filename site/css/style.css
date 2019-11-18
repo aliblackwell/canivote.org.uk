@@ -277,11 +277,22 @@ blockquote {
  right: 3rem;
 }
 
+@media (max-width: 900px) {
+  .dir-rtl .logo {
+    top: 1rem;
+    right: 1rem;
+   }
+}
+
 @media (max-width: 600px) {
   .logo {
     top: 1rem;
     left: 1rem;
   }
+  .dir-rtl .logo {
+    left: auto;
+    right: 1rem;
+   }
   .logo img {
     height: 50px;
   }
@@ -462,7 +473,7 @@ a.register-cta:hover {
 }
 
 .translate-section {
-  right: 14rem;
+  right: 11rem;
   top: 2rem;
   z-index: 9;
 }
@@ -474,7 +485,7 @@ a.register-cta:hover {
 
 .dir-rtl .translate-section {
   right: auto;
-  left: 14rem;
+  left: 11rem;
 }
 
 @media (max-width: 900px) {
@@ -489,7 +500,7 @@ a.register-cta:hover {
     left: 1rem;
   }
 
-  .translate-section {
+  /* .translate-section {
     right: 11rem;
     top: 1rem;
     z-index: 9;
@@ -497,17 +508,17 @@ a.register-cta:hover {
   .dir-rtl .translate-section {
     right: auto;
     left: 11rem;
-  }
+  } */
 
   .translate-section {
     right: 3.5rem;
-    top: 5rem;
+    top: 6rem;
     z-index: 9;
   }
 
   .dir-rtl .translate-section {
-    right: auto;
-    left: 3.5rem;
+    right: 1rem;
+    left: auto;
   }
 
   .home .translate-section {
@@ -529,8 +540,8 @@ a.register-cta:hover {
     z-index: 9;
   }
   .dir-rtl .translate-section {
-    right: auto;
-    left: 3.5rem;
+    right: 1rem;
+    left: auto;
   }
 }
 
@@ -543,6 +554,10 @@ a.register-cta:hover {
   position: absolute;
   font-size: inherit;
   cursor: pointer;
+}
+
+.sharer.translate-section button {
+  font-size: var(--px-16);
 }
 
 .sharer button::after {
@@ -610,6 +625,10 @@ a.register-cta:hover {
 
 .sharer li {
   margin-bottom: 0rem;
+}
+
+.sharer.translate-section li {
+  font-size: var(--px-16);
 }
 
 .sharer li a,
