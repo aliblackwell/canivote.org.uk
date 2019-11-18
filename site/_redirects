@@ -1,2 +1,6 @@
 / country=:country  /:country  301
 /bn country=:country  /bn/:country  301
+/hi country=:country  /hi/:country  301
+/si country=:country  /si/:country  301
+/ta country=:country  /ta/:country  301
+/ur country=:country  /ur/:country  301
