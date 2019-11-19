@@ -1,0 +1,17 @@
+<article class="sharer share-section" aria-live="polite">
+  <button class="ws-semibold" onclick="sharePage()">{{words[language]['share.share']}}</button>
+  <ul aria-hidden="true">
+    <li class="fb">
+      <a class="share-link" tabindex="-1" target="_blank" href="https://www.facebook.com/sharer.php?u=https://www.canivote.org.uk/{{ country.name | slug }}/&t=Can I Vote?">{{words[language]['share.facebook']}}</a>
+    </li>
+    <li class="tt">
+      <a class="share-link" tabindex="-1" target="_blank" href="https://twitter.com/share?text=Can I Vote?&url=https://www.canivote.org.uk/{{ country.name | slug }}/">{{words[language]['share.twitter']}}</a>
+    </li>
+    <li class="wa wa-desktop">
+      <a class="share-link" tabindex="-1" target="_blank" href="https://wa.me?text=https://www.canivote.org.uk/{{ country.name | slug }}/">{{words[language]['share.whatsapp']}}</a>
+    </li>
+    <li class="wa wa-mobile">
+      <a class="share-link" tabindex="-1" href="whatsapp://send?text=https://www.canivote.org.uk/{{ country.name | slug }}/" data-action="share/whatsapp/share">{{words[language]['share.whatsapp']}}</a>
+    </li>
+  </ul>
+</article>

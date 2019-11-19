@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{language}}"  dir="{{dir}}">
+<html lang="{{language}}" dir="{{dir}}">
 
   <head>
     <meta charset="utf-8">
@@ -32,10 +32,7 @@
   </head>
 
   <body class="country ws-medium dir-{{dir}} script-{{language}}">
- 
-    
-    
- 
+
     <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
     <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
       <link itemprop="url" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
@@ -45,16 +42,16 @@
 
     <main class="container">
 
-      
-
       <header>
-        <h1 class="logo"><a href="{{basePermalink}}" title="{{words[language]['main.can-i-vote']}}"><img src="/img/can-i-vote-tick-burgandy.svg" alt="{{words[language]['main.can-i-vote']}}" /></a></h1>
+        <h1 class="logo">
+          <a href="{{basePermalink}}" title="{{words[language]['main.can-i-vote']}}"><img src="/img/can-i-vote-tick-burgandy.svg" alt="{{words[language]['main.can-i-vote']}}"/></a>
+        </h1>
       </header>
 
       {% if country.cw %}
         <section class="main-content">
           <header class="result">
-            <h1 class="ws-bold"  id="content">{{words[language]['result.yes']}}</h1>
+            <h1 class="ws-bold" id="content">{{words[language]['result.yes']}}</h1>
             <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
           </header>
           <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
@@ -66,76 +63,81 @@
         <section class="white-angle-area">
           <div class="content-container">
             <ul class="ws-semibold tick-list">
-            {% if country.name === "Hong Kong" %}
-            <li>Former residents of Hong Kong (born before 1997) who hold a British Dependent Territories, British Nationals (Overseas) or British Overseas passport qualify for registration.</li>
-            {% else %}
-              <li>{{words[language]['actions.yes.first']}}</li>
+              {% if country.name === "Hong Kong" %}
+                <li>Former residents of Hong Kong (born before 1997) who hold a British Dependent Territories, British Nationals (Overseas) or British Overseas passport qualify for registration.</li>
+              {% else %}
+                <li>{{words[language]['actions.yes.first']}}</li>
 
-            {%endif%}
-              <li>{{words[language]['actions.yes.second']}}</li>
-              <li>{{words[language]['actions.yes.third']}}</li>
-            </ul>
-          </div>
+                {%endif%}
+                <li>{{words[language]['actions.yes.second']}}</li>
+                <li>{{words[language]['actions.yes.third']}}</li>
+              </ul>
+            </div>
 
-        {% elseif country.eu %}
-          <section class="main-content">
-            <header class="result">
-              <h1 class="ws-bold">{{words[language]['result.no']}}</h1>
-              <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
-            </header>
-            <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
-              {{country.name}}
-              {{words[language]['result.result-no']}}
+          {% elseif country.eu %}
+            <section class="main-content">
+              <header class="result">
+                <h1 class="ws-bold">{{words[language]['result.no']}}</h1>
+                <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
+              </header>
+              <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
+                {{country.name}}
+                {{words[language]['result.result-no']}}
+              </h2>
+              <h3 class="ws-bold but-local title">{{words[language]['result.eu-subtitle']}}</h3>
+              <a class="ws-semibold register-cta" href="https://www.registertovote.service.gov.uk/register-to-vote/country-of-residence" target="_blank" title="Register to vote on gov.uk">{{words[language]['result.register']}}</a>
+            </section>
+            {% include "partials/ticks-non-voters.njk" %}
+          {% else %}
+
+            <section class="main-content">
+              <header class="result">
+                <h1 class="ws-bold">{{words[language]['result.no']}}</h1>
+                <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
+              </header>
+              <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
+                {{country.name}}
+                {{words[language]['result.result-no']}}
+              </h2>
+              <h3 class="ws-bold title">{{words[language]['result.no-subtitle']}}</h3>
+            </section>
+            {% include "partials/ticks-non-voters.njk" %}
+          {% endif %}
+          {{ content | safe }}
+
+          <article id="sign-up">
+            <h1 class="ws-bold">{{words[language]['signup.title.h1']}}<br/>
+              {{words[language]['signup.title.h2']}}</h1>
+            <h2 class="ws-medium">{{words[language]['signup.subtitle']}}
             </h2>
-            <h3 class="ws-bold but-local title">{{words[language]['result.eu-subtitle']}}</h3>
-            <a class="ws-semibold register-cta" href="https://www.registertovote.service.gov.uk/register-to-vote/country-of-residence" target="_blank" title="Register to vote on gov.uk">{{words[language]['result.register']}}</a>
-          </section>
-          {% include "partials/ticks-non-voters.njk" %}
+            <form name="sign-up" netlify="netlify">
+              <label for="name">{{words[language]['signup.name']}}
+                <input type="text" name="name" required="required"/>
+              </label>
+              <label for="email">{{words[language]['signup.email']}}
+                <input type="email" name="email" required="required"/>
+              </label>
+              <label for="email">{{words[language]['signup.phone']}}
+                <input type="number" name="number"/>
+              </label>
+              <label for="sign-up">{{words[language]['signup.disclaimer']}}
+                <input class="ws-bold" name="sign-up" type="submit" value="{{words[language]['signup.submit']}}"/>
+              </label>
+            </form>
+          </article>
+        </section>
+        {% if country.cw %}
+          {% include "partials/sharer-country.njk" %}
         {% else %}
-
-          <section class="main-content">
-            <header class="result">
-              <h1 class="ws-bold">{{words[language]['result.no']}}</h1>
-              <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
-            </header>
-            <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
-              {{country.name}}
-              {{words[language]['result.result-no']}}
-            </h2>
-            <h3 class="ws-bold title">{{words[language]['result.no-subtitle']}}</h3>
-          </section>
-          {% include "partials/ticks-non-voters.njk" %}
+          {% include "partials/sharer.njk" %}
         {% endif %}
-        {{ content | safe }}
 
-        <article id="sign-up">
-          <h1 class="ws-bold">{{words[language]['signup.title.h1']}}<br/>
-            {{words[language]['signup.title.h2']}}</h1>
-          <h2 class="ws-medium">{{words[language]['signup.subtitle']}}
-          </h2>
-          <form name="sign-up" netlify="netlify">
-            <label for="name">{{words[language]['signup.name']}}
-              <input type="text" name="name" required="required"/>
-            </label>
-            <label for="email">{{words[language]['signup.email']}}
-              <input type="email" name="email" required="required"/>
-            </label>
-            <label for="email">{{words[language]['signup.phone']}}
-              <input type="number" name="number"/>
-            </label>
-            <label for="sign-up">{{words[language]['signup.disclaimer']}}
-              <input class="ws-bold" name="sign-up" type="submit" value="{{words[language]['signup.submit']}}"/>
-            </label>
-          </form>
-        </article>
-      </section>
-      {% include "partials/sharer.njk" %}
-      {% include "partials/country-translate.njk" %}
-      {% include "partials/footer.njk" %}
+        {% include "partials/country-translate.njk" %}
+        {% include "partials/footer.njk" %}
 
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
-    <script src="/js/selector-interceptor.js"></script>
-  </body>
+      </main>
+      <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+      <script src="/js/selector-interceptor.js"></script>
+    </body>
 
-</html>
+  </html>
