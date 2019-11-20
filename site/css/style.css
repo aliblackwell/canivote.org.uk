@@ -27,6 +27,7 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -875,6 +876,11 @@ footer p {
 ul.tick-list {
   padding-left: 0;
   text-align: left;
+}
+
+ul.tick-list a {
+  color: var(--black);
+  text-decoration: none;
 }
 #sign-up {
   background: var(--pink-transparent);

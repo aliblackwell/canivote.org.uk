@@ -66,13 +66,13 @@
             <div class="content-container">
               <ul class="ws-semibold tick-list">
                 {% if country.name === "Hong Kong" %}
-                  <li>Former residents of Hong Kong (born before 1997) who hold a British Dependent Territories, British Nationals (Overseas) or British Overseas passport qualify for registration.</li>
+                  <li><a href="#sign-up">Former residents of Hong Kong (born before 1997) who hold a British Dependent Territories, British Nationals (Overseas) or British Overseas passport qualify for registration.</a></li>
                 {% else %}
-                  <li>{{words[language]['actions.yes.first']}}</li>
+                  <li><a href="#sign-up">{{words[language]['actions.yes.first']}}</a></li>
 
                   {%endif%}
-                  <li>{{words[language]['actions.yes.second']}}</li>
-                  <li>{{words[language]['actions.yes.third']}}</li>
+                  <li><a href="#sign-up">{{words[language]['actions.yes.second']}}</a></li>
+                  <li><a href="#sign-up">{{words[language]['actions.yes.third']}}</a></li>
                 </ul>
               </div>
 
