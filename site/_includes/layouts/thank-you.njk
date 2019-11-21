@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <title>Thank you</title>
+  </head>
+
+  <body class="country ws-medium dir-{{dir}} script-{{language}}">
+
+    {% include "partials/skip-to-content.njk" %}
+
+    <main class="container">
+
+      <header>
+        <h1 class="logo">
+          <a href="/" title="{{words[language]['main.can-i-vote']}}"><img src="/img/can-i-vote-tick-burgandy.svg" alt="{{words[language]['main.can-i-vote']}}"/></a>
+        </h1>
+      </header>
+
+ 
+      <article id="sign-up">
+        <h1 class="ws-bold">
+          Thank you for signing up.</h1>
+        <h2 class="ws-medium">You will be redirected to our partner site shortly
+        </h2>
+        <p>Or, <a href="/">go back to Can I Vote?</a></p>
+        <script>
+          function redirectPage() {
+            window.location = 'https://38d.gs/wevote-citizensuk'
+          } {
+            setTimeout(redirectPage, 7000)
+          }
+        </script>
+
+      </article>
+    </section>
+
+    
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+
+</body>
+
+</html>
