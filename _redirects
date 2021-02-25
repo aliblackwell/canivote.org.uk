@@ -1,0 +1,7 @@
+/en/handle-form country=:country  /:country  301
+/bn/handle-form country=:country  /bn/:country  301
+/hi/handle-form country=:country  /hi/:country  301
+/si/handle-form country=:country  /si/:country  301
+/ta/handle-form country=:country  /ta/:country  301
+/ur/handle-form country=:country  /ur/:country  301
+
