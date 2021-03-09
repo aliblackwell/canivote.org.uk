@@ -145,6 +145,10 @@
         </main>
         <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
         <script src="/js/selector-interceptor.js"></script>
+        <script>
+          // Remove query params
+          window.history.replaceState(null, null, window.location.pathname);
+        </script>
       </body>
 
     </html>
