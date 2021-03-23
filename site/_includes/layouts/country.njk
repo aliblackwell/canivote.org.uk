@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
+    {% include "partials/font-face.njk" %}
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/favicon.png"/>
     {% if country.cw %}
@@ -31,7 +31,7 @@
       {{country.name}}</title>
   </head>
 
-  <body class="country ws-medium dir-{{dir}} script-{{language}}">
+  <body class="country text-regular dir-{{dir}} script-{{language}}">
 
     <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/countries/{{country.name | slug}}.png">
     <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
@@ -44,28 +44,28 @@
 
       <header>
         <h1 class="logo">
-          <a href="{{basePermalink}}" title="{{words[language]['main.can-i-vote']}}"><img src="/img/can-i-vote-tick-burgandy.svg" alt="{{words[language]['main.can-i-vote']}}"/></a>
+          <a href="{{basePermalink}}" title="{{words[language]['main.can-i-vote']}}"><img src="/img/can-i-vote-logo-yellow.svg" alt="{{words[language]['main.can-i-vote']}}"/></a>
         </h1>
       </header>
 
       {% if country.cw %}
         <section class="main-content">
           <header class="result">
-            <h1 class="ws-bold" id="content">{{words[language]['result.yes']}}</h1>
+            <h1 class="text-condensed" id="content">{{words[language]['result.yes']}}</h1>
             <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
           </header>
-          <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
+          <h2 class="text-condensed title">{{words[language]['result.citizens-of']}}
             {%if language !== 'ur'%}
               {{country.name}}
               {%endif%}
               {{words[language]['result.result-yes']}}
             </h2>
-            <a class="ws-semibold register-cta" href="https://www.registertovote.service.gov.uk/register-to-vote/country-of-residence" target="_blank" title="Register to vote on gov.uk">{{words[language]['result.register']}}</a>
+            <a class="text-bold register-cta" href="https://www.registertovote.service.gov.uk/register-to-vote/country-of-residence" target="_blank" title="Register to vote on gov.uk">{{words[language]['result.register']}}</a>
             {% include 'partials/demo-club-widget.njk'%}
           </section>
           <section class="white-angle-area">
             <div class="content-container">
-              <ul class="ws-semibold tick-list">
+              <ul class="text-bold tick-list">
                 {% if country.name === "Hong Kong" %}
                   <li><a href="#sign-up">Former residents of Hong Kong (born before 1997) who hold a British Dependent Territories, British Nationals (Overseas) or British Overseas passport qualify for registration.</a></li>
                 {% else %}
@@ -80,44 +80,44 @@
             {% elseif country.eu %}
               <section class="main-content">
                 <header class="result">
-                  <h1 class="ws-bold">{{words[language]['result.no']}}</h1>
+                  <h1 class="text-condensed">{{words[language]['result.no']}}</h1>
                   <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
                 </header>
-                <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
+                <h2 class="text-condensed title">{{words[language]['result.citizens-of']}}
                 {%if language !== 'ur'%}
                   {{country.name}}
                   {%endif%}
                   {{words[language]['result.result-no']}}
                 </h2>
-                <h3 class="ws-bold but-local title">{{words[language]['result.eu-subtitle']}}</h3>
-                <a class="ws-semibold register-cta" href="https://www.registertovote.service.gov.uk/register-to-vote/country-of-residence" target="_blank" title="Register to vote on gov.uk">{{words[language]['result.register']}}</a>
+                <h3 class="text-bold but-local title">{{words[language]['result.eu-subtitle']}}</h3>
+                <a class="text-bold register-cta" href="https://www.registertovote.service.gov.uk/register-to-vote/country-of-residence" target="_blank" title="Register to vote on gov.uk">{{words[language]['result.register']}}</a>
               </section>
               {% include "partials/ticks-non-voters.njk" %}
             {% else %}
 
               <section class="main-content">
                 <header class="result">
-                  <h1 class="ws-bold">{{words[language]['result.no']}}</h1>
+                  <h1 class="text-condensed">{{words[language]['result.no']}}</h1>
                   <img class="flag" src="/flags/{{ country.code | lower }}.svg" alt="{{ country.name }} Flag"/>
                 </header>
-                <h2 class="ws-bold title">{{words[language]['result.citizens-of']}}
+                <h2 class="text-condensed title">{{words[language]['result.citizens-of']}}
                 {%if language !== 'ur'%}
                   {{country.name}}
                   {%endif%}
                   {{words[language]['result.result-no']}}
                 </h2>
-                <h3 class="ws-bold title">{{words[language]['result.no-subtitle']}}</h3>
+                <h3 class="text-bold title">{{words[language]['result.no-subtitle']}}</h3>
               </section>
               {% include "partials/ticks-non-voters.njk" %}
             {% endif %}
             {{ content | safe }}
 
             <article id="sign-up">
-              <h1 class="ws-bold">{{words[language]['signup.title.h1']}}<br/>
+              <h1 class="text-bold">{{words[language]['signup.title.h1']}}<br/>
                 {{words[language]['signup.title.h2']}}</h1>
-              <h2 class="ws-medium">{{words[language]['signup.subtitle']}}
+              <h2 class="text-regular">{{words[language]['signup.subtitle']}}
               </h2>
-              <form name="sign-up" netlify="netlify" action="/form-submit">
+              <form name="sign-up" netlify="netlify" action="/form-submit" class="text-regular">
                 <label for="name">{{words[language]['signup.name']}}
                   <input type="text" name="name" required/>
                 </label>
@@ -128,7 +128,7 @@
                   <input type="number" name="number"/>
                 </label>
                 <label for="sign-up">{{words[language]['signup.disclaimer']}}
-                  <input class="ws-bold" name="sign-up" type="submit" value="{{words[language]['signup.submit']}}"/>
+                  <input class="text-bold" name="sign-up" type="submit" value="{{words[language]['signup.submit']}}"/>
                 </label>
               </form>
             </article>

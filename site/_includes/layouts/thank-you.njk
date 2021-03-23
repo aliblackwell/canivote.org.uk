@@ -4,13 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/tml4vii.css">
+    {% include "partials/font-face.njk" %}
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <title>Thank you</title>
   </head>
 
-  <body class="country ws-medium dir-{{dir}} script-{{language}}">
+  <body class="country text-regular dir-{{dir}} script-{{language}}">
 
     {% include "partials/skip-to-content.njk" %}
 
@@ -24,9 +24,9 @@
 
  
       <article id="sign-up">
-        <h1 class="ws-bold">
+        <h1 class="text-bold">
           Thank you for signing up.</h1>
-        <h2 class="ws-medium">You will be redirected to our partner site shortly
+        <h2 class="text-regular">You will be redirected to our partner site shortly
         </h2>
         <p>Or, <a href="/">go back to Can I Vote?</a></p>
         <script>
