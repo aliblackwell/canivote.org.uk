@@ -215,6 +215,10 @@ blockquote {
   margin: 0 1.5em;
 }
 
+.center {
+  text-align: center;
+}
+
 .text-regular {
   font-family: 'national-2-regular', 'sans-serif';
   font-weight: 400;
