@@ -773,7 +773,7 @@ a.register-cta:active, a.register-cta:hover {
   width: 110%;
   transform: rotate(-2.5deg);
   right: -2rem;
-  bottom: -5rem;
+  bottom: -3.8rem;
   height: 100%;
 }
 
@@ -784,7 +784,7 @@ a.register-cta:active, a.register-cta:hover {
   margin-bottom: 0;
   overflow: hidden;
   z-index: 11;
-  padding-top: 9rem;
+  padding-top: 8rem;
 }
 
 @media (max-width: 600px) {
@@ -799,6 +799,17 @@ a.register-cta:active, a.register-cta:hover {
 
 footer img {
   max-width: 10rem;
+}
+
+.country footer .words {
+  width: 70%;
+  float: left;
+}
+
+
+.country footer .footer-logo {
+  width: 25%;
+  float: right;
 }
 
 footer p {
@@ -845,7 +856,7 @@ footer p {
   height: 100%;
   padding-top: var(--top-space);
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
 }
 
 .result h1 {
@@ -876,7 +887,6 @@ footer p {
   background: transparent;
   padding: 7.5rem 0 0;
   position: relative;
-  bottom: 6rem;
   z-index: 1;
 }
 
@@ -887,7 +897,7 @@ footer p {
   background: white;
   transform: rotate(-2.5deg);
   right: -2rem;
-  bottom: -5rem;
+  bottom: -4rem;
   height: 100%;
 }
 
@@ -1039,7 +1049,7 @@ input[type="submit"] {
 }
 
 form[name="sign-up"] input[type="submit"] {
-  margin-top: 1rem;
+  margin: 1rem 0 5rem 0;
 }
 
 .country input[type="submit"] {
