@@ -470,9 +470,16 @@ a.register-cta:active, a.register-cta:hover {
 
 #can-i-vote h2, .country h2.title {
   color: var(--dark-blue-text);
-  font-size: var(--px-45);
+  font-size: 4.5vw;
   margin: 0 auto 1rem;
   line-height: 1.2;
+  max-width: 8em;
+}
+
+.country h2.title {
+  font-size: var(--px-45);
+  margin-top: 0.5rem;
+  margin-bottom:0.5rem;
 }
 
 .script-en #can-i-vote h2, .script-en h2.title {
@@ -506,7 +513,7 @@ a.register-cta:active, a.register-cta:hover {
 
 .country h3.title {
   font-size: var(--px-35);
-  max-width: 30rem;
+  max-width: 18em;
   margin: 0 auto;
 }
 
@@ -880,6 +887,7 @@ footer p {
   position: relative;
   width: 39rem;
   margin: 1rem auto 0;
+  max-width: 100%;
 }
 
 .white-angle-area ul li {
@@ -1019,6 +1027,10 @@ input[type="submit"] {
   border-radius: 0;
   -webkit-appearance: none;
   border-radius: 0;
+}
+
+form[name="sign-up"] input[type="submit"] {
+  margin-top: 1rem;
 }
 
 .country input[type="submit"] {
