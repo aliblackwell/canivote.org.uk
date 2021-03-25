@@ -338,15 +338,16 @@ footer {
 a.register-cta, a.register-cta:visited {
   display: inline-block;
   font-size: var(--px-52);
-  background: var(--darker-bg);
+  background: var(--green);
   text-decoration: none;
-  color: var(--dark-blue-bg);
+  color: white;
   text-transform: uppercase;
   padding: 0.5rem 1rem;
   line-height: 1;
   margin: 1.5rem 1rem 0;
   position: relative;
   z-index: 15;
+  letter-spacing: -1px;
 }
 
 a.register-cta:active, a.register-cta:hover {
@@ -566,22 +567,25 @@ a.register-cta:active, a.register-cta:hover {
 
 /* Sharer */
 
-.sharer {
+.top-button {
   position: absolute;
   top: 2rem;
-  right: 3rem;
-  font-size: var(--px-26);
-  width: 8rem;
+  right: 1.5rem;
+  font-size: var(--px-26); 
   z-index: 14;
 }
 
+.top-button button {
+  text-transform: uppercase;
+}
+
 .translate-section {
-  right: 11rem;
+  right: 6.5rem;
   top: 2rem;
   z-index: 9;
 }
 
-.dir-rtl .sharer {
+.dir-rtl .top-button {
   right: auto;
   left: 3rem;
 }
@@ -601,15 +605,7 @@ a.register-cta:active, a.register-cta:hover {
     right: auto;
     left: 1rem;
   }
-  /* .translate-section {
-    right: 11rem;
-    top: 1rem;
-    z-index: 9;
-  }
-  .dir-rtl .translate-section {
-    right: auto;
-    left: 11rem;
-  } */
+ 
   .translate-section {
     right: 2rem;
     top: 6rem;
@@ -642,27 +638,28 @@ a.register-cta:active, a.register-cta:hover {
   }
 }
 
-.sharer button {
+.top-button button {
   border: none;
   background: var(--dark-blue-bg);
   padding: 0.35em 1.75em 0.35em 0.5em;
   color: white;
-  text-transform: uppercase;
-  position: absolute;
+  text-transform: uppercase; 
   font-size: inherit;
   cursor: pointer;
+  font-size: var(--px-16);
+  border-radius: 10px;
 }
 
-.sharer.translate-section button {
-  font-size: var(--px-16);
+.top-button.translate-section button {
+  
   background: var(--darker-bg);
   color: var(--dark-blue-text);
 }
 
-.sharer button::after {
+.top-button button::after {
   content: "";
-  width: 1.15em;
-  height: 1.15em;
+  width: 1.25em;
+  height: 1.45em;
   position: absolute;
   background-image: url("../img/down-icon-white.svg");
   background-size: 0.8em;
@@ -672,27 +669,31 @@ a.register-cta:active, a.register-cta:hover {
   top: 0.38em;
 }
 
-.translate-section.sharer button::after {
+.translate-section.top-button button::after {
   background-image: url("../img/down-icon-blue.svg");
 }
  
-.sharer ul {
+.top-button ul {
   padding: 0.35em 0.5em;
   color: var(--dark-blue-text);
   background: var(--darker-bg);
   margin: 3rem 0 0 0;
-  width: 10rem;
-  margin-left: -2.6rem;
+  padding: 0.75rem 1.5rem;
+  width: auto;
+  margin-left: 0;
   border: solid var(--pink-muted) var(--small-border-width);
   list-style: none;
   transition: all 0.25s ease;
   position: relative;
   opacity: 1;
   top: 0;
+  right: 0;
   animation: fadeIn 0.5s both;
+  position: absolute;
+  font-size: 1rem;
 }
 
-.sharer ul.hidden {
+.top-button ul.hidden {
   margin-top: -13rem;
   transition: all 0.5s ease;
   animation: fadeOut 0.25s both;
@@ -722,20 +723,15 @@ a.register-cta:active, a.register-cta:hover {
   }
 }
 
-.sharer li {
+.top-button li {
   margin-bottom: 0rem;
 }
 
-.sharer.translate-section li {
-  font-size: var(--px-16);
-}
-
-.sharer li a, .sharer li a:visited {
+.top-button li a, .top-button li a:visited {
   display: block;
   color: var(--pink-muted);
   text-decoration: none;
   padding: 0.25rem 0;
-  padding-left: 1.5rem;
   background-size: 1rem;
   background-position: center left;
   background-repeat: no-repeat;
@@ -747,19 +743,22 @@ a.register-cta:active, a.register-cta:hover {
   background-position: center right;
 }
 
-.sharer li.fb a {
+.top-button li.fb a {
   background-image: url("../img/facebook.svg");
+  padding-left: 1.5rem;
 }
 
-.sharer li.tt a {
+.top-button li.tt a {
   background-image: url("../img/twitter.svg");
+  padding-left: 1.5rem;
 }
 
-.sharer li.wa a {
+.top-button li.wa a {
   background-image: url("../img/whatsapp.svg");
+  padding-left: 1.5rem;
 }
 
-.sharer li a:hover, .sharer li a:active {
+.top-button li a:hover, .top-button li a:active {
   text-decoration: underline;
 }
 
@@ -1021,7 +1020,8 @@ select {
 }
 
 *:focus {
-  outline: 4px solid var(--dc-outline-focus);
+  outline: 1px dotted var(--dark-blue-text);
+  outline-offset: 5px;
 }
 
 input[type="submit"] {
