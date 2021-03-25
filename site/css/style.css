@@ -478,6 +478,7 @@ a.register-cta:active, a.register-cta:hover {
 
 .country h2.title {
   font-size: var(--px-45);
+  max-width: 12em;
   margin-top: 0.5rem;
   margin-bottom:0.5rem;
 }
@@ -885,7 +886,7 @@ footer p {
 
 .white-angle-area ul {
   position: relative;
-  width: 39rem;
+  width: 34rem;
   margin: 1rem auto 0;
   max-width: 100%;
 }
