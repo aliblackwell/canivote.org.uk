@@ -434,17 +434,24 @@ a.register-cta:active, a.register-cta:hover {
     order: 1;
     flex-grow: 0;
   }
+
+  .logo-box, .content-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  body .logo-box h1 svg {
+    width: 40vw;
+  }
+  
 }
 
 .inner-content-box {
   width: 100%;
 }
 
-.logo-box, .content-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .logo-box h1 svg {
   width: 80%;
