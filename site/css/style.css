@@ -478,6 +478,7 @@ a.register-cta:active, a.register-cta:hover {
 
 .country h2.title {
   font-size: var(--px-45);
+  font-size: 3rem;
   max-width: 12em;
   margin-top: 0.5rem;
   margin-bottom:0.5rem;
@@ -848,7 +849,7 @@ footer p {
   font-size: var(--px-149);
   background: var(--dark-blue-bg);
   float: left;
-  padding: 0.3rem 2.5rem;
+  padding: 0.15rem 2.5rem 0.45rem;
   line-height: 1;
 }
 
