@@ -2,6 +2,7 @@
   --px-149: 6rem;
   --px-52: 2rem;
   --px-45: 2.5rem;
+  --px-60: 3rem;
   --px-35: 1.5rem;
   --px-45-lh: 1.1;
   --px-26: 1.25rem;
@@ -74,10 +75,11 @@ Core breakpoints
 @media (max-width: 600px) {
   :root {
     --default-20px: 16px;
+    --px-60: 1.5rem;
     --px-26: 1.1rem;
     --px-35: 1.2rem;
     --px-45: 1.6rem;
-    --px-52: 1.8rem;
+    --px-52: 1.2rem;
     --content-width: 580px;
     --border-width: 0.4rem;
     --px-149: 4rem;
@@ -91,7 +93,6 @@ Core breakpoints
     --px-26: 1rem;
     --px-35: 1.1rem;
     --px-45: 1.4rem;
-    --px-52: 1.6rem;
     --px-149: 3.8rem;
     --content-width: 90%;
   }
@@ -375,13 +376,11 @@ a.register-cta:active, a.register-cta:hover {
 /* Homepage */
 
 @media (min-width: 1000px) {
-
   .home-flex {
     display: grid;
     grid-template-columns: 50% 50%;
     min-height: 60vh;
   }
-
   .home .main-content {
     max-width: 100%;
   }
@@ -409,15 +408,13 @@ a.register-cta:active, a.register-cta:hover {
     display: flex;
     align-items: flex-end;
   }
-
   .home .footer-logo a {
     flex-grow: 1;
   }
-
   .home .footer-logo a {
     display: block;
   }
-  .home footer  {
+  .home footer {
     width: 50%;
   }
   .home footer .content-container {
@@ -435,24 +432,20 @@ a.register-cta:active, a.register-cta:hover {
     order: 1;
     flex-grow: 0;
   }
-
   .logo-box, .content-box {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
   }
-
   body .logo-box h1 svg {
     width: 40vw;
   }
-  
 }
 
 .inner-content-box {
   width: 100%;
 }
-
 
 .logo-box h1 svg {
   width: 80%;
@@ -486,10 +479,10 @@ a.register-cta:active, a.register-cta:hover {
 
 .country h2.title {
   font-size: var(--px-45);
-  font-size: 3rem;
+  font-size: var(--px-60);
   max-width: 12em;
   margin-top: 0.5rem;
-  margin-bottom:0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .script-en #can-i-vote h2, .script-en h2.title {
@@ -571,7 +564,7 @@ a.register-cta:active, a.register-cta:hover {
   position: absolute;
   top: 2rem;
   right: 1.5rem;
-  font-size: var(--px-26); 
+  font-size: var(--px-26);
   z-index: 14;
 }
 
@@ -605,7 +598,6 @@ a.register-cta:active, a.register-cta:hover {
     right: auto;
     left: 1rem;
   }
- 
   .translate-section {
     right: 2rem;
     top: 6rem;
@@ -627,9 +619,13 @@ a.register-cta:active, a.register-cta:hover {
 }
 
 @media (max-width: 480px) {
+
+  .top-button {
+    top: 3rem
+  }
   .translate-section {
-    right: 3.5rem;
-    top: 5rem;
+    right: 1.5rem;
+    top: 1rem;
     z-index: 9;
   }
   .dir-rtl .translate-section {
@@ -643,7 +639,7 @@ a.register-cta:active, a.register-cta:hover {
   background: var(--dark-blue-bg);
   padding: 0.35em 1.75em 0.35em 0.5em;
   color: white;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   font-size: inherit;
   cursor: pointer;
   font-size: var(--px-16);
@@ -651,7 +647,6 @@ a.register-cta:active, a.register-cta:hover {
 }
 
 .top-button.translate-section button {
-  
   background: var(--darker-bg);
   color: var(--dark-blue-text);
 }
@@ -672,7 +667,7 @@ a.register-cta:active, a.register-cta:hover {
 .translate-section.top-button button::after {
   background-image: url("../img/down-icon-blue.svg");
 }
- 
+
 .top-button ul {
   padding: 0.35em 0.5em;
   color: var(--dark-blue-text);
@@ -762,8 +757,6 @@ a.register-cta:active, a.register-cta:hover {
   text-decoration: underline;
 }
 
- 
-
 /* Footer */
 
 .country footer::before {
@@ -788,12 +781,17 @@ a.register-cta:active, a.register-cta:hover {
 }
 
 @media (max-width: 600px) {
-  footer {
-    height: 35rem;
+  html body main.container footer {
+    height: 28rem;
     overflow: hidden;
   }
-  footer::before {
+  html body main.container footer::before {
     right: -1rem;
+  }
+  body main.container footer .words, body main.container footer .footer-logo {
+    float: none;
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -805,7 +803,6 @@ footer img {
   width: 70%;
   float: left;
 }
-
 
 .country footer .footer-logo {
   width: 25%;
@@ -875,6 +872,11 @@ footer p {
   float: right;
   margin: 0;
   height: var(--flag-height);
+}
+
+@media (max-width: 600px) {
+  .country .result {}
+  .result img {}
 }
 
 @media (max-width: 480px) {
@@ -998,7 +1000,7 @@ ul.tick-list a {
     max-width: 100%;
   }
   #sign-up {
-    padding: 3rem 3rem 10rem;
+    padding: 3rem 2rem 10rem;
     width: 100%;
   }
 }
