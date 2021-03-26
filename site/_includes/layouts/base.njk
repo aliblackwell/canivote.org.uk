@@ -1,48 +1,53 @@
 <!doctype html>
 <html lang="{{language}}" dir="{{dir}}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include "partials/font-face.njk" %}
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" type="image/png" href="/favicon.png"/>
-    <title>Can I Vote?</title>
-    {% include "partials/default-meta-tags.njk" %}
-  </head>
 
-  <body class="home text-regular dir-{{dir}} script-{{language}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include "partials/font-face.njk" %}
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title>Can I Vote?</title>
+  {% include "partials/default-meta-tags.njk" %}
+</head>
 
-    {% include "partials/skip-to-content.njk" %}
-    <link itemprop="thumbnailUrl" href="https://staging.canivote.org.uk/img/can-i-vote.png">
-    <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
-      <link itemprop="url" href="https://staging.canivote.org.uk/img/can-i-vote.png">
-    </span>
+<body class="home text-regular dir-{{dir}} script-{{language}}">
 
-    <main class="container">
-      <section class="site-content main-content home-flex" id="can-i-vote">
-        <div class="logo-box">
-          <h1 class="text-condensed">
+  {% include "partials/skip-to-content.njk" %}
+  <link itemprop="thumbnailUrl" href="https://staging.canivote.org.uk/img/can-i-vote.png">
+  <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
+    <link itemprop="url" href="https://staging.canivote.org.uk/img/can-i-vote.png">
+  </span>
 
-            {% include "partials/logo.njk" %}
-          </h1>
-        </div>
-        <div class="content-box">
-          <div class="inner-content-box">
-            <h2 class="text-condensed">{{words[language]["main.not-just-british-citizens"]}}</h2>
+  <main class="container">
+    <section class="site-content main-content home-flex" id="can-i-vote">
+      <div class="logo-box">
+        <h1 class="text-condensed">
 
-            <form id="country-selector" method="get" action="/{{language}}/handle-form" autocomplete="off" type="search">
-              <label class="screen-reader-text text-condensed uc" for="id_country">
-                {{words[language]['main.choose-country']}}
-              </label>
-              <select name="country" labelledby="id_country" id="id_country">
-                <option value="" class="text-regular" aria-hidden="true">{{words[language]['main.choose-country']}}
-                </option>
-                {% for country in countries %}
+          {% include "partials/logo.njk" %}
+        </h1>
+      </div>
+      <div class="content-box">
+        <div class="inner-content-box">
+          <h2 class="text-condensed">{{words[language]["main.not-just-british-citizens"]}}</h2>
+
+          <form id="country-selector" method="get" action="/{{language}}/handle-form" autocomplete="off" type="search">
+            <label class="text-bold uc" for="id_country">
+              {{words[language]['main.choose-country']}}
+            </label>
+            <div class="flex-form">
+              <span class="flex-item country">
+                <select name="country" labelledby="id_country" id="id_country">
+                  <option value="" class="text-regular" aria-hidden="true"></option>
+                  {% for country in countries %}
                   <option class="text-regular" value="{{ country.name | slug }}">{{ country.name }}</option>
-                {% endfor %}
-              </select>
-
-              <input class="text-bold" type="submit" value="{{words[language]['form.submit']}}">
+                  {% endfor %}
+                </select>
+              </span>
+              <span class="flex-item submit">
+                <input class="text-bold" type="submit" value="{{words[language]['form.submit']}}">
+              </span>
+            </div>
             </label>
           </form>
         </div>

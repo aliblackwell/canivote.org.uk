@@ -292,7 +292,6 @@ footer {
   position: relative;
 }
 
-
 .content-container {
   max-width: var(--content-width);
   margin: 0 auto;
@@ -394,8 +393,18 @@ a.register-cta:active, a.register-cta:hover {
   flex-direction: column-reverse;
 }
 
+.home.dir-rtl .container {
+  background: var(--light-bg);
+}
+
+.home .container {
+  background: var(--darker-bg);
+}
 
 @media (max-width: 1000px) {
+  .home.dir-rtl .container {
+    background: var(--darker-bg);
+  }
   html body.home main.container footer {
     background: var(--light-bg);
     padding: 3rem 1rem 1rem;
@@ -407,23 +416,21 @@ a.register-cta:active, a.register-cta:hover {
   .home .top-button.translate-section button {
     background: var(--light-bg);
   }
-
   .home .top-button ul {
     background: var(--light-bg);
   }
-
   .home .content-box {
     padding: 0rem 2rem 2rem;
   }
-
   .home footer .footer-logo img {
     margin-bottom: 1rem;
   }
-  
 }
 
-
 @media (min-width: 1000px) {
+  .home.dir-rtl .container {
+    background: var(--lighter-bg);
+  }
   .home-flex {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -444,6 +451,9 @@ a.register-cta:active, a.register-cta:hover {
     bottom: 0;
     z-index: 1;
   }
+  .home.dir-rtl::before {
+    background: var(--darker-bg);
+  }
   .home .words {
     order: 2;
   }
@@ -456,6 +466,10 @@ a.register-cta:active, a.register-cta:hover {
     position: relative;
     display: flex;
     align-items: flex-end;
+  }
+  .home.dir-rtl .footer-logo {
+    padding-right: 0rem;
+    padding-left: 1rem;
   }
   .home .footer-logo a {
     flex-grow: 1;
@@ -526,6 +540,17 @@ a.register-cta:active, a.register-cta:hover {
   max-width: 8em;
 }
 
+#can-i-vote h2 {
+  margin: 0 auto;
+}
+
+.home label.text-bold.uc {
+  margin: 1rem auto;
+  display: block;
+  color: var(--dark-blue-text);
+  letter-spacing: -1px;
+}
+
 @media (max-width: 900px) {
   #can-i-vote h2, .country h2.title {
     font-size: var(--px-45);
@@ -548,11 +573,29 @@ a.register-cta:active, a.register-cta:hover {
   color: var(--dark-blue-text);
 }
 
-#country-selector {
+.flex-form {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 0vh;
+}
+
+.flex-item {
+  display: grid;
+  flex: 0 0 auto;
+}
+
+.flex-item.country {
+  width: 70%;
+}
+
+.flex-item.country select {
+  max-width: 100%;
+  width: 100%;
+}
+
+.flex-item.submit {
+  width: 30%;
 }
 
 .main-content {
@@ -609,11 +652,12 @@ a.register-cta:active, a.register-cta:hover {
   }
 }
 
-.home .container {
-  background: var(--darker-bg);
-}
-
 /* Sharer */
+
+.dir-rtl .top-button {
+  right: auto;
+  left: 1.5rem;
+}
 
 .top-button {
   position: absolute;
@@ -627,20 +671,26 @@ a.register-cta:active, a.register-cta:hover {
   text-transform: uppercase;
 }
 
+.dir-rtl .translate-section {
+  left: 6.5rem;
+  right: auto;
+}
+
+.dir-rtl.country .top-button.translate-section {
+  left: 6.5rem;
+  right: auto;
+}
+
 .translate-section {
   right: 6.5rem;
   top: 2rem;
   z-index: 9;
 }
 
-.dir-rtl .top-button {
+.dir-rtl.country .top-button {
+  top: 1rem;
   right: auto;
-  left: 3rem;
-}
-
-.dir-rtl .translate-section {
-  right: auto;
-  left: 11rem;
+  left: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -653,28 +703,13 @@ a.register-cta:active, a.register-cta:hover {
     right: auto;
     left: 1rem;
   }
-  /* .country .translate-section {
-    right: 2rem;
-    top: 6rem;
-    z-index: 9;
-  } */
-  .dir-rtl .translate-section {
-    right: 1rem;
-    left: auto;
-  }
-  /* .home .translate-section {
-    right: auto;
-    top: 1rem;
+  .dir-rtl.country .top-button.translate-section {
     left: 1rem;
-  } */
-  .dir-rtl.home .translate-section {
-    left: auto;
-    right: 1rem;
+    top: 3.5rem;
   }
 }
 
 @media (max-width: 480px) {
-
   .country .top-button {
     top: 3rem
   }
@@ -683,12 +718,10 @@ a.register-cta:active, a.register-cta:hover {
     top: 1rem;
     z-index: 9;
   }
-
   .home .translate-section {
     right: auto;
     left: 1.5rem;
   }
-
   .dir-rtl .translate-section {
     right: 1rem;
     left: auto;
@@ -711,7 +744,6 @@ a.register-cta:active, a.register-cta:hover {
   background: var(--darker-bg);
   color: var(--dark-blue-text);
 }
-
 
 .top-button button::after {
   content: "";
@@ -748,6 +780,10 @@ a.register-cta:active, a.register-cta:hover {
   animation: fadeIn 0.5s both;
   position: absolute;
   font-size: 1rem;
+}
+
+.dir-rtl .top-button.share-section ul {
+  right: -5rem;
 }
 
 .top-button ul.hidden {
