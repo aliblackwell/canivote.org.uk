@@ -264,7 +264,7 @@ blockquote {
   margin: 0 auto;
   position: relative;
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   flex-direction: column;
 }
 
@@ -391,6 +391,33 @@ a.register-cta:active, a.register-cta:hover {
 }
 
 
+@media (max-width: 1000px) {
+  html body.home main.container footer {
+    background: var(--light-bg);
+    padding: 3rem 1rem 1rem;
+  }
+  .container {
+    height: auto;
+    min-height: 100vh;
+  }
+  .home .top-button.translate-section button {
+    background: var(--light-bg);
+  }
+
+  .home .top-button ul {
+    background: var(--light-bg);
+  }
+
+  .home .content-box {
+    padding: 0rem 2rem 2rem;
+  }
+
+  .home footer .footer-logo img {
+    margin-bottom: 1rem;
+  }
+  
+}
+
 
 @media (min-width: 1000px) {
   .home-flex {
@@ -493,6 +520,12 @@ a.register-cta:active, a.register-cta:hover {
   margin: 0 auto 1rem;
   line-height: 1.2;
   max-width: 8em;
+}
+
+@media (max-width: 900px) {
+  #can-i-vote h2, .country h2.title {
+    font-size: var(--px-45);
+  }
 }
 
 .country h2.title {
@@ -616,7 +649,7 @@ a.register-cta:active, a.register-cta:hover {
     right: auto;
     left: 1rem;
   }
-  .translate-section {
+  .country .translate-section {
     right: 2rem;
     top: 6rem;
     z-index: 9;
@@ -625,11 +658,11 @@ a.register-cta:active, a.register-cta:hover {
     right: 1rem;
     left: auto;
   }
-  .home .translate-section {
+  /* .home .translate-section {
     right: auto;
     top: 1rem;
     left: 1rem;
-  }
+  } */
   .dir-rtl.home .translate-section {
     left: auto;
     right: 1rem;
@@ -638,14 +671,20 @@ a.register-cta:active, a.register-cta:hover {
 
 @media (max-width: 480px) {
 
-  .top-button {
+  .country .top-button {
     top: 3rem
   }
-  .translate-section {
+  .country .translate-section {
     right: 1.5rem;
     top: 1rem;
     z-index: 9;
   }
+
+  .home .translate-section {
+    right: auto;
+    left: 1.5rem;
+  }
+
   .dir-rtl .translate-section {
     right: 1rem;
     left: auto;
@@ -668,6 +707,7 @@ a.register-cta:active, a.register-cta:hover {
   background: var(--darker-bg);
   color: var(--dark-blue-text);
 }
+
 
 .top-button button::after {
   content: "";
@@ -803,6 +843,9 @@ a.register-cta:active, a.register-cta:hover {
     height: 28rem;
     overflow: hidden;
   }
+  html body.home main.container footer {
+    height: auto;
+  }
   html body main.container footer::before {
     right: -1rem;
   }
@@ -842,6 +885,9 @@ footer p {
   footer .words {
     width: 100%;
     margin-bottom: 5rem;
+  }
+  .home footer .words {
+    margin-bottom: 1rem;
   }
   footer img {
     max-width: 10rem;
