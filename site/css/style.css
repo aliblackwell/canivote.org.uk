@@ -400,7 +400,7 @@ a.register-cta:active, a.register-cta:hover {
     background: var(--light-bg);
     padding: 3rem 1rem 1rem;
   }
-  .container {
+  .container, .home .container {
     height: auto;
     min-height: 100vh;
   }
