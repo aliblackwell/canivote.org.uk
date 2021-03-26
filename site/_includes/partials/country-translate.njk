@@ -2,13 +2,32 @@
   <button class="text-condensed uc" onclick="translatePage()">Translate</button>
   <ul aria-hidden="true" class="text-regular">
     <li>
+      <a class="translate-link" tabindex="-1" href="/ar/{{ country.name | slug }}" hreflang="ar">العربية</a>
+    </li>
+    <li>
+      <a class="translate-link" tabindex="-1" href="/cy/{{ country.name | slug }}" hreflang="cy">Cymraeg</a>
+    </li>
+    <li>
       <a class="translate-link" tabindex="-1" href="/{{ country.name | slug }}" hreflang="en">English</a>
     </li>
     <li>
-      <a class="translate-link" tabindex="-1" href="/fr/{{ country.name | slug }}" hreflang="en">Français</a>
+      <a class="translate-link" tabindex="-1" href="/es/{{ country.name | slug }}" hreflang="es">Español</a>
     </li>
     <li>
-      <a class="translate-link" tabindex="-1" href="/ar/{{ country.name | slug }}" hreflang="en">العربية</a>
+      <a class="translate-link" tabindex="-1" href="/fr/{{ country.name | slug }}" hreflang="fr">Français</a>
     </li>
+    <li>
+      <a class="translate-link" tabindex="-1" href="/hi/{{ country.name | slug }}" hreflang="hi">हिन्दी, हिंदी</a>
+    </li>
+    <li>
+      <a class="translate-link" tabindex="-1" href="/it/{{ country.name | slug }}" hreflang="it">Italiano</a>
+    </li>
+    <li>
+      <a class="translate-link" tabindex="-1" href="/pl/{{ country.name | slug }}" hreflang="pl">Polszczyzna</a>
+    </li>
+    <li>
+      <a class="translate-link" tabindex="-1" href="/so/{{ country.name | slug }}" hreflang="so">Soomaaliga</a>
+    </li>
+    
   </ul>
 </article>

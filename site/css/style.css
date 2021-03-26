@@ -414,7 +414,9 @@ a.register-cta:active, a.register-cta:hover {
     min-height: 100vh;
   }
   .home .top-button.translate-section button {
+    /* ch */
     background: var(--light-bg);
+    color: var(--dark-blue-text);
   }
   .home .top-button ul {
     background: var(--light-bg);
@@ -671,18 +673,18 @@ a.register-cta:active, a.register-cta:hover {
   text-transform: uppercase;
 }
 
-.dir-rtl .translate-section {
-  left: 6.5rem;
+.dir-rtl .share-section {
+  left: 7.5rem;
   right: auto;
 }
 
-.dir-rtl.country .top-button.translate-section {
-  left: 6.5rem;
+.dir-rtl.country .top-button.share-section {
+  left: 7.5rem;
   right: auto;
 }
 
-.translate-section {
-  right: 6.5rem;
+.share-section {
+  right: 7.5rem;
   top: 2rem;
   z-index: 9;
 }
@@ -703,7 +705,7 @@ a.register-cta:active, a.register-cta:hover {
     right: auto;
     left: 1rem;
   }
-  .dir-rtl.country .top-button.translate-section {
+  .dir-rtl.country .top-button.share-section {
     left: 1rem;
     top: 3.5rem;
   }
@@ -713,16 +715,16 @@ a.register-cta:active, a.register-cta:hover {
   .country .top-button {
     top: 3rem
   }
-  .country .translate-section {
+  .country .share-section {
     right: 1.5rem;
     top: 1rem;
     z-index: 9;
   }
-  .home .translate-section {
+  .home .share-section {
     right: auto;
     left: 1.5rem;
   }
-  .dir-rtl .translate-section {
+  .dir-rtl .share-section {
     right: 1rem;
     left: auto;
   }
@@ -730,9 +732,9 @@ a.register-cta:active, a.register-cta:hover {
 
 .top-button button {
   border: none;
-  background: var(--dark-blue-bg);
+  background: var(--darker-bg);
   padding: 0.35em 1.75em 0.35em 0.5em;
-  color: white;
+  color: var(--dark-blue-text);
   text-transform: uppercase;
   font-size: inherit;
   cursor: pointer;
@@ -740,9 +742,9 @@ a.register-cta:active, a.register-cta:hover {
   border-radius: 10px;
 }
 
-.top-button.translate-section button {
-  background: var(--darker-bg);
-  color: var(--dark-blue-text);
+.top-button.share-section button {
+  background: var(--dark-blue-bg);
+  color: white;
 }
 
 .top-button button::after {
@@ -750,7 +752,7 @@ a.register-cta:active, a.register-cta:hover {
   width: 1.25em;
   height: 1.45em;
   position: absolute;
-  background-image: url("../img/down-icon-white.svg");
+  background-image: url("../img/down-icon-blue.svg");
   background-size: 0.8em;
   background-repeat: no-repeat;
   background-position: center center;
@@ -758,8 +760,9 @@ a.register-cta:active, a.register-cta:hover {
   top: 0.38em;
 }
 
-.translate-section.top-button button::after {
-  background-image: url("../img/down-icon-blue.svg");
+.share-section.top-button button::after {
+  /* ch */
+  background-image: url("../img/down-icon-white.svg");
 }
 
 .top-button ul {
@@ -782,12 +785,17 @@ a.register-cta:active, a.register-cta:hover {
   font-size: 1rem;
 }
 
-.dir-rtl .top-button.share-section ul {
-  right: -5rem;
+@media (max-width: 480px) {
+  .dir-rtl .top-button.share-section ul {
+    right: 0rem;
+  }
+  .dir-rtl.country .top-button.share-section ul {
+    right: -4rem;
+}
 }
 
 .top-button ul.hidden {
-  margin-top: -13rem;
+  margin-top: -20rem;
   transition: all 0.5s ease;
   animation: fadeOut 0.25s both;
 }
