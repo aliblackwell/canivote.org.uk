@@ -284,6 +284,11 @@ footer {
   order: 3;
 }
 
+.home footer {
+  position: relative;
+}
+
+
 .content-container {
   max-width: var(--content-width);
   margin: 0 auto;
@@ -375,6 +380,18 @@ a.register-cta:active, a.register-cta:hover {
 
 /* Homepage */
 
+.home .main-content {
+  padding-top: 8rem;
+  padding-bottom: 5rem;
+}
+
+.home footer .content-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+
+
 @media (min-width: 1000px) {
   .home-flex {
     display: grid;
@@ -383,6 +400,7 @@ a.register-cta:active, a.register-cta:hover {
   }
   .home .main-content {
     max-width: 100%;
+    padding-top: 0;
   }
   .home::before {
     content: '';
