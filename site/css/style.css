@@ -260,11 +260,15 @@ blockquote {
   font-style: normal;
 }
 
+.home .container {
+  height: 100vh;
+}
+
 .container {
   margin: 0 auto;
   position: relative;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -649,11 +653,11 @@ a.register-cta:active, a.register-cta:hover {
     right: auto;
     left: 1rem;
   }
-  .country .translate-section {
+  /* .country .translate-section {
     right: 2rem;
     top: 6rem;
     z-index: 9;
-  }
+  } */
   .dir-rtl .translate-section {
     right: 1rem;
     left: auto;
