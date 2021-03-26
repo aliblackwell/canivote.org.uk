@@ -4,7 +4,21 @@
       <p class="text-regular">{{words[language]['footer.paragraph']}}</p>
     </div>
     <div class="footer-logo">
-      <a href="https://www.citizensuk.org/" target="_blank" title="Visit Citizens UK's website"><img src="/img/Citizens-logo-03.svg" srcset="/img/Citizens-logo-03.svg 1000w, /img/Citizens-logo-02.svg 999w" alt="Citizens UK"/></a>
+      <a href="https://www.citizensuk.org/" target="_blank" title="Visit Citizens UK's website">
+
+
+
+        <picture>
+          <source srcset="/img/Citizens-logo-03.svg" media="(min-width: 1000px)" />
+          <source srcset="/img/Citizens-logo-02.svg" media="(max-width: 1000px)" />
+          <img src="/img/Citizens-logo-03.svg" alt="Citizens UK" />
+        </picture>
+
+
+
+
+
+      </a>
     </div>
   </div>
 </footer>

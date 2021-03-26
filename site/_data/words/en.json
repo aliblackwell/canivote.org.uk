@@ -33,6 +33,7 @@
     "signup.name": "Name",
     "signup.email": "Email",
     "signup.phone": "Number (optional)",
+    "signup.prompt": "We’ll remind you when and where to vote by post or on polling day.",
     "signup.disclaimer": "Sign up to be contacted by Citizens UK using the details you provide above",
     "signup.submit": "Sign up",
     "footer.paragraph": "We are the home of community organising in the UK. Our diverse membership of over 400 civic organisations includes schools, universities, churches, mosques, synagogues, parents’ groups, health practices, charities and trade unions. We’re independent from Government and funded by our membership and our projects."

@@ -1,7 +1,5 @@
 /en/handle-form country=:location  /:location  301
-/bn/handle-form country=:location  /bn/:location  301
-/hi/handle-form country=:location  /hi/:location  301
-/si/handle-form country=:location  /si/:location  301
-/ta/handle-form country=:location  /ta/:location  301
-/ur/handle-form country=:location  /ur/:location  301
+/fr/handle-form country=:location  /fr/:location  301
+/ar/handle-form country=:location  /ar/:location  301
+ 
 
