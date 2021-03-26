@@ -97,7 +97,7 @@ function createBatch(all, cw) {
   for (let i = 0; i < all.length; i++) {
  
     if (cw.includes(all[i].name.common)) {
-      countryList += ` https://www.canivote.org.uk/${urlize(all[i].name.common)}`
+      countryList += ` https://staging.canivote.org.uk/${urlize(all[i].name.common)}`
     }
   }
   

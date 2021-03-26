@@ -10,18 +10,18 @@
       <meta name="description" content="Citizens of {{ country.name }} can vote on May 6th."/>
       <meta property="og:title" content="Can I Vote: {{ country.name }}"/>
       <meta property="og:site_name" content="Can I Vote"/>
-      <meta property="og:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/"/>
+      <meta property="og:url" content="https://staging.canivote.org.uk/{{ country.name | slug }}/"/>
       <meta property="og:description" content="Citizens of {{ country.name }} can vote on May 6th."/>
       <meta property="og:type" content="website">
-      <meta property="og:image" content="https://www.canivote.org.uk/img/socials-share/{{ country.name }}.png"/>
+      <meta property="og:image" content="https://staging.canivote.org.uk/img/socials-share/{{ country.name }}.png"/>
       <meta property="og:image:width" content="1536"/>
       <meta property="og:image:height" content="864"/>
       <meta property="og:image:alt" content="Yes! Citizens of {{ country.name }} can vote on Thursday May 6th. Register to vote. Deadline to register: 19th April."/>
       <meta name="twitter:card" content="summary"/>
       <meta name="twitter:title" content="Can I Vote: {{ country.name }}"/>
       <meta name="twitter:description" content="Citizens of {{ country.name }} can vote on May 6th."/>
-      <meta name="twitter:url" content="https://www.canivote.org.uk/{{ country.name | slug }}/"/>
-      <meta name="twitter:image" content="https://www.canivote.org.uk/img/socials-share/{{ country.name }}.png"/>
+      <meta name="twitter:url" content="https://staging.canivote.org.uk/{{ country.name | slug }}/"/>
+      <meta name="twitter:image" content="https://staging.canivote.org.uk/img/socials-share/{{ country.name }}.png"/>
     {% else %}
       {% include "partials/default-meta-tags.njk" %}
     {% endif %}
@@ -30,14 +30,14 @@
   </head>
   <body class="country text-regular dir-{{ dir }} script-{{ language }}">
     {% if country.cw or country.eu or country.code == 'GBR' %}
-      <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/web-share/{{ country.name }}.png">
+      <link itemprop="thumbnailUrl" href="https://staging.canivote.org.uk/img/web-share/{{ country.name }}.png">
       <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
-        <link itemprop="url" href="https://www.canivote.org.uk/img/web-share/{{ country.name }}.png">
+        <link itemprop="url" href="https://staging.canivote.org.uk/img/web-share/{{ country.name }}.png">
       </span>
     {% else %}
-      <link itemprop="thumbnailUrl" href="https://www.canivote.org.uk/img/web-share/Can-I-Vote-share.png">
+      <link itemprop="thumbnailUrl" href="https://staging.canivote.org.uk/img/web-share/Can-I-Vote-share.png">
       <span itemprop="thumbnail" itemscope="itemscope" itemtype="http://schema.org/ImageObject">
-        <link itemprop="url" href="https://www.canivote.org.uk/img/web-share/Can-I-Vote-share.png">
+        <link itemprop="url" href="https://staging.canivote.org.uk/img/web-share/Can-I-Vote-share.png">
       </span>
     {% endif %}
     {% include "partials/skip-to-content.njk" %}

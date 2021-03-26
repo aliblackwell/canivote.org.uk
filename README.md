@@ -6,4 +6,4 @@ It deploys to Netlify and uses Netlify forms for signups.
 
 It has been designed to conform to WCAG2.1 (Web Content Accessibility Guidelines) at level AA.
 
-It is publised by [Citizens UK](https://www.citizensuk.org/) at [https://www.canivote.org.uk](https://www.canivote.org.uk)
+It is publised by [Citizens UK](https://www.citizensuk.org/) at [https://staging.canivote.org.uk](https://staging.canivote.org.uk)
