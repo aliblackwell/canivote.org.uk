@@ -9,7 +9,7 @@
   --default-20px: 18px;
   --larger-script-22px: 22px;
   --px-16: 0.9rem;
-  --top-space: 6rem;
+  --top-space: 6rem;549
   --line-height: 1.2;
   --content-width: 1100px;
   --border-width: 0.5rem;
@@ -559,6 +559,25 @@ a.register-cta:active, a.register-cta:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .home .flex-form {
+    display: block;
+  }
+  .home label.text-bold.uc {
+    margin: 1rem auto 0.5rem;
+  }
+  .home .flex-item.country {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .home .flex-item.submit {
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+}
+
 .country h2.title {
   font-size: var(--px-45);
   font-size: var(--px-60);
@@ -786,6 +805,10 @@ a.register-cta:active, a.register-cta:hover {
 }
 
 @media (max-width: 480px) {
+  .top-button.share-section ul {
+    left: 0rem;
+    right: auto;
+  }
   .dir-rtl .top-button.share-section ul {
     right: 0rem;
   }
